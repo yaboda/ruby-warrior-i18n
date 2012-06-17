@@ -67,6 +67,8 @@ captive:
   first_letter: C
 wizard:
   first_letter: w
+golem:
+  first_letter: G
 take_damage_health_left: takes %1 damage, %2 health power left
 player:
   dies: dies

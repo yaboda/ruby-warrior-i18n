@@ -13,7 +13,7 @@ module RubyWarrior
       end
       
       def character
-        "G"
+        "#{R18n.t.golem.first_letter}"
       end
     end
   end
