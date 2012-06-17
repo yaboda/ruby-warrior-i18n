@@ -1,5 +1,9 @@
 $: << File.dirname(__FILE__)
 
+require 'bundler/setup'
+Bundler.setup
+require 'r18n-core'
+
 require 'set'
 
 require 'ruby_warrior/core_additions'
