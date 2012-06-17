@@ -23,7 +23,7 @@ module RubyWarrior
       end
       
       def character
-        "s"
+        "#{R18n.t.sludge.first_letter}"
       end
     end
   end

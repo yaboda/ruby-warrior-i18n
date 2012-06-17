@@ -57,6 +57,8 @@ bonus:
   clear: Clear Bonus
 wall: wall
 nothing: nothing
+sludge:
+  first_letter: s
 take_damage_health_left: takes %1 damage, %2 health power left
 player:
   dies: dies
