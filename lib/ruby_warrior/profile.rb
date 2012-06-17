@@ -47,9 +47,9 @@ module RubyWarrior
     
     def to_s
       if epic?
-        [warrior_name, tower.name, "first score #{score}", "epic score #{epic_score_with_grade}"].join(' - ')
+        [warrior_name, tower.name, "#{R18n.t.score.first} #{score}", "#{R18n.t.score.epic} #{epic_score_with_grade}"].join(' - ')
       else
-        [warrior_name, tower.name, "level #{level_number}", "score #{score}"].join(' - ')
+        [warrior_name, tower.name, "#{R18n.t.level.level} #{level_number}", "#{R18n.t.score.score} #{score}"].join(' - ')
       end
     end
     

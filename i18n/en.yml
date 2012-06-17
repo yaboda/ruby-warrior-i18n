@@ -8,6 +8,7 @@ first_level_generated: First level has been generated. See the rubywarrior/%1/RE
 mode:
   back_to_normal: Another level has been added since you started epic, going back to normal mode.
 level:
+  level: level
   number: "Level %1: "
   starting: Starting Level %1
   failed: Sorry, you failed level %1. Change your script and try again.
@@ -33,3 +34,7 @@ game:
   average_grade_for_tower: "Your average grade for this tower is: %1"
 warrior:
   enter_name: "Enter a name for your warrior: "
+score: 
+  score: score
+  epic: epic score
+  first: first score
