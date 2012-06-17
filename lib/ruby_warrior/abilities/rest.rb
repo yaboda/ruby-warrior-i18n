@@ -2,7 +2,7 @@ module RubyWarrior
   module Abilities
     class Rest < Base
       def description
-        "Gain 10% of max health back, but do nothing more."
+        "#{R18n.t.rest.description}"
       end
       
       def perform
@@ -10,9 +10,9 @@ module RubyWarrior
           amount = (@unit.max_health*0.1).round
           amount = @unit.max_health-@unit.health if (@unit.health + amount) > @unit.max_health
           @unit.health += amount
-          @unit.say "receives #{amount} health from resting, up to #{@unit.health} health"
+          @unit.say "#{R18n.t.rest.receives_health(amount, @unit.health)}"
         else
-          @unit.say "is already fit as a fiddle"
+          @unit.say "#{R18n.t.rest.fit_fiddle}"
         end
       end
     end

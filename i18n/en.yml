@@ -73,3 +73,30 @@ take_damage_health_left: takes %1 damage, %2 health power left
 player:
   dies: dies
   released_from_bonds: released from bonds
+direction:
+  unknown: Unknown direction %1. Should be :forward, :backward, :left or :right.
+  move_forward_default: Move in the given direction (forward by default).
+  bumps_into: bumps into
+walk:
+  walk: walk
+  capitalized: Walk
+  s: walks
+attack:
+  in_given_direction: Attacks a unit in given direction (forward by default).
+  and_hits: attacks %1 and hits %2
+  and_hits_nothing: attacks %1 and hits nothing
+feel:
+  description: Returns a Space for the given direction (forward by default).
+rest:
+  description: Gain 10% of max health back, but do nothing more.
+  receives_health: receives %1 health from resting, up to %2 health
+  fit_fiddle: is already fit as a fiddle
+health:
+  description: Returns an integer representing your health.
+look:
+  description: Returns an array of up to three Spaces in the given direction (forward by default).
+shoot:
+  description: Shoot your bow & arrow in given direction (forward by default).
+  and_hits: shoots %1 and hits %2
+  and_hits_nothing: shoots and hits nothing
+

@@ -2,17 +2,17 @@ module RubyWarrior
   module Abilities
     class Walk < Base
       def description
-        "Move in the given direction (forward by default)."
+        "#{R18n.t.direction.move_forward_default}"
       end
       
       def perform(direction = :forward)
         verify_direction(direction)
         if @unit.position
-          @unit.say "walks #{direction}"
+          @unit.say "#{R18n.t.walk.s} #{direction}"
           if space(direction).empty?
             @unit.position.move(*offset(direction))
           else
-            @unit.say "bumps into #{space(direction)}"
+            @unit.say "#{R18n.t.direction.bumps_into} #{space(direction)}"
           end
         end
       end

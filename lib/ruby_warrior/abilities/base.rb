@@ -36,7 +36,7 @@ module RubyWarrior
       
       def verify_direction(direction)
         unless Position::RELATIVE_DIRECTIONS.include? direction
-          raise "Unknown direction #{direction.inspect}. Should be :forward, :backward, :left or :right."
+          raise R18n.t.direction.unknown
         end
       end
     end

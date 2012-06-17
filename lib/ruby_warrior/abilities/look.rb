@@ -2,7 +2,7 @@ module RubyWarrior
   module Abilities
     class Look < Base
       def description
-        "Returns an array of up to three Spaces in the given direction (forward by default)."
+        "#{R18n.t.look.description}"
       end
       
       def perform(direction = :forward)

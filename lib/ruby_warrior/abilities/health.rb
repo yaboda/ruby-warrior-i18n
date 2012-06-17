@@ -2,7 +2,7 @@ module RubyWarrior
   module Abilities
     class Health < Base
       def description
-        "Returns an integer representing your health."
+        "#{R18n.t.health.description}"
       end
       
       def perform

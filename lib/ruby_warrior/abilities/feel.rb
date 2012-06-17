@@ -2,7 +2,7 @@ module RubyWarrior
   module Abilities
     class Feel < Base
       def description
-        "Returns a Space for the given direction (forward by default)."
+        "#{R18n.t.feel.description}"
       end
       
       def perform(direction = :forward)
