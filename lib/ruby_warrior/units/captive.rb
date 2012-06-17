@@ -10,7 +10,7 @@ module RubyWarrior
       end
       
       def character
-        "C"
+        "#{R18n.t.captive.first_letter}"
       end
     end
   end
