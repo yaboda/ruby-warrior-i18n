@@ -27,7 +27,7 @@ module RubyWarrior
       end
       
       def character
-        "w"
+        "#{R18n.t.wizard.first_letter}"
       end
     end
   end

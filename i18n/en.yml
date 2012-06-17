@@ -65,6 +65,8 @@ thick_sludge:
   first_letter: S
 captive:
   first_letter: C
+wizard:
+  first_letter: w
 take_damage_health_left: takes %1 damage, %2 health power left
 player:
   dies: dies
