@@ -19,7 +19,7 @@ module RubyWarrior
       
       def earn_points(points)
         @score += points
-        say "earns #{points} points"
+        say R18n.t.warrior.earns_points(points)
       end
       
       def attack_power
@@ -38,7 +38,7 @@ module RubyWarrior
         if @name && !@name.empty?
           @name
         else
-          "Warrior"
+          "#{R18n.t.warrior.capitalized}"
         end
       end
       
@@ -51,7 +51,7 @@ module RubyWarrior
       end
       
       def perform_turn
-        say "does nothing" if @current_turn.action.nil?
+        say "#{R18n.t.warrior.does_nothing}" if @current_turn.action.nil?
         super
       end
       

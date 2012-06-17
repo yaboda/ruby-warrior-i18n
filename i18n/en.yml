@@ -35,7 +35,10 @@ game:
   tower: tower
   average_grade_for_tower: "Your average grade for this tower is: %1"
 warrior:
+  capitalized: Warrior
   enter_name: "Enter a name for your warrior: "
+  earns_points: earns %1 points
+  does_nothing: does nothing
 score: 
   score: score
   epic: epic score
@@ -55,3 +58,6 @@ bonus:
 wall: wall
 nothing: nothing
 take_damage_health_left: takes %1 damage, %2 health power left
+player:
+  dies: dies
+  released_from_bonds: released from bonds
