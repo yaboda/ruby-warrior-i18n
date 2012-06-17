@@ -23,10 +23,10 @@ module RubyWarrior
         unbind if bound?
         if health
           self.health -= amount
-          say "takes #{amount} damage, #{health} health power left"
+          say R18n.t.take_damage_health_left(amount, health)
           if health <= 0
             @position = nil
-            say "dies"
+            say R18n.t.player.dies
           end
         end
       end
@@ -40,7 +40,7 @@ module RubyWarrior
       end
       
       def unbind
-        say "released from bonds"
+        say R18n.t.player.released_from_bonds
         @bound = false
       end
       
