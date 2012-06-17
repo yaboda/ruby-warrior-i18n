@@ -4,12 +4,12 @@ module RubyWarrior
       attr_accessor :time
       
       def description
-        "Kills you and all surrounding units. You probably don't want to do this intentionally."
+        "#{R18n.t.explode.description}"
       end
       
       def perform
         if @unit.position
-          @unit.say "explodes, collapsing the ceiling and damanging every unit."
+          @unit.say "#{R18n.t.explode.collapsing_the_ceiling}"
           @unit.position.floor.units.map do |unit|
             unit.take_damage(100)
           end
@@ -18,7 +18,7 @@ module RubyWarrior
       
       def pass_turn
         if @time && @unit.position
-          @unit.say "is ticking"
+          @unit.say "#{R18n.t.explode.is_ticking}"
           @time -= 1
           perform if @time.zero?
         end

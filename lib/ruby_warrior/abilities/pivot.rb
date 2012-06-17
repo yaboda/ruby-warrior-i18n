@@ -4,13 +4,13 @@ module RubyWarrior
       ROTATION_DIRECTIONS = [:forward, :right, :backward, :left]
       
       def description
-        "Rotate :left, :right or :backward (default)"
+        "#{R18n.t.rotate.description}"
       end
       
       def perform(direction = :backward)
         verify_direction(direction)
         @unit.position.rotate(ROTATION_DIRECTIONS.index(direction))
-        @unit.say "pivots #{direction}"
+        @unit.say "#{R18n.t.rotate.pivots} #{direction}"
       end
     end
   end

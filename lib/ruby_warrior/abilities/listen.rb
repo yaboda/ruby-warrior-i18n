@@ -2,7 +2,7 @@ module RubyWarrior
   module Abilities
     class Listen < Base
       def description
-        "Returns an array of all spaces which have units in them."
+        "#{R18n.t.listen.description}"
       end
       
       def perform

@@ -2,7 +2,7 @@ module RubyWarrior
   module Abilities
     class DirectionOfStairs < Base
       def description
-        "Returns the direction (:left, :right, :forward, :backward) the stairs are from your location."
+        "#{R18n.t.direction_of_stairs.description}"
       end
       
       def perform

@@ -2,7 +2,7 @@ module RubyWarrior
   module Abilities
     class DistanceOf < Base
       def description
-        "Pass a Space as an argument, and it will return an integer representing the distance to that space."
+        "#{R18n.t.distance_of.description}"
       end
       
       def perform(space)

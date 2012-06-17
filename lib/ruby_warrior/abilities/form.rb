@@ -2,7 +2,7 @@ module RubyWarrior
   module Abilities
     class Form < Base
       def description
-        "Forms a golem in given direction taking half of invoker's health. The passed block is executed for each golem turn."
+        "#{R18n.t.form.description}"
       end
       
       def perform(direction = :forward, &block)
@@ -15,9 +15,9 @@ module RubyWarrior
           golem.turn = block
           @unit.health -= health
           @unit.position.floor.add(golem, x, y, @unit.position.direction)
-          @unit.say "forms a golem #{direction} and gives half of his health (#{health})"
+          @unit.say "#{R18n.t.form.golem_gives_health(direction, health)}"
         else
-          @unit.say "fails to form golem because something is blocking the way."
+          @unit.say "#{R18n.t.form.fails}"
         end
       end
     end

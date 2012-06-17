@@ -2,7 +2,7 @@ module RubyWarrior
   module Abilities
     class DirectionOf < Base
       def description
-        "Pass a Space as an argument, and the direction (:left, :right, :forward, :backward) to that space will be returned."
+        "#{R18n.t.direction_of.description}"
       end
       
       def perform(space)

@@ -99,4 +99,34 @@ shoot:
   description: Shoot your bow & arrow in given direction (forward by default).
   and_hits: shoots %1 and hits %2
   and_hits_nothing: shoots and hits nothing
-
+rescue:
+  description: Rescue a captive from his chains (earning 20 points) in given direction (forward by default).
+  unbinds_and_rescues: unbinds %1 and rescues %2
+  unbinds_and_rescues_nothing: unbinds %1 and rescues nothing
+rotate:
+  description: Rotate :left, :right or :backward (default)
+  pivots: pivots
+distance_of:
+  description: Pass a Space as an argument, and it will return an integer representing the distance to that space.
+bind:
+  description: Binds a unit in given direction to keep him from moving (forward by default).
+  and_restricts: binds %1 and restricts %2
+  and_restricts_nothing: binds %1 and restricts nothing 
+listen:
+  description: Returns an array of all spaces which have units in them.
+direction_of_stairs:
+  description: Returns the direction (:left, :right, :forward, :backward) the stairs are from your location.
+direction_of: 
+  description: Pass a Space as an argument, and the direction (:left, :right, :forward, :backward) to that space will be returned.
+explode: 
+  description: Kills you and all surrounding units. You probably don't want to do this intentionally.
+  collapsing_the_ceiling: explodes, collapsing the ceiling and damanging every unit.
+  is_ticking: is ticking
+detonate: 
+  description: Detonate a bomb in a given direction (forward by default) which damages that space and surrounding 4 spaces (including yourself). 
+  bomb_deadly_explosion: detonates a bomb %1 launching a deadly explosion.
+  ticking_explosive: caught in bomb's flames which detonates ticking explosive
+form:
+  description: Forms a golem in given direction taking half of invoker's health. The passed block is executed for each golem turn.
+  golem_gives_health: forms a golem %1 and gives half of his health (%2)
+  fails: fails to form golem because something is blocking the way.

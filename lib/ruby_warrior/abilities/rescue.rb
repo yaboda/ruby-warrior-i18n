@@ -2,21 +2,21 @@ module RubyWarrior
   module Abilities
     class Rescue < Base
       def description
-        "Rescue a captive from his chains (earning 20 points) in given direction (forward by default)."
+        "#{R18n.t.rescue.description}"
       end
       
       def perform(direction = :forward)
         verify_direction(direction)
         if space(direction).captive?
           recipient = unit(direction)
-          @unit.say "unbinds #{direction} and rescues #{recipient}"
+          @unit.say "#{R18n.t.rescue.unbinds_and_rescues(direction, recipient)}"
           recipient.unbind
           if recipient.kind_of? Units::Captive
             recipient.position = nil
             @unit.earn_points(20)
           end
         else
-          @unit.say "unbinds #{direction} and rescues nothing"
+          @unit.say "#{R18n.t.rescue.unbinds_and_rescues_nothing(direction)}"
         end
       end
     end
