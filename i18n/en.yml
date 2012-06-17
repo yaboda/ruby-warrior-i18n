@@ -43,4 +43,4 @@ answer:
   y: y
   n: n
 item:
-  choose_typing_number: Choose %1 by typing the number: 
+  choose_typing_number: "Choose %1 by typing the number: "
