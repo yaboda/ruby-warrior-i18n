@@ -1,13 +1,14 @@
 module RubyWarrior
+  
   class Game
     
     def start
-      UI.puts "Welcome to Ruby Warrior"
+      UI.puts R18n.t.welcome
       
       if File.exist?(Config.path_prefix + '/.profile')
         @profile = Profile.load(Config.path_prefix + '/.profile')
       else
-        if File.exist?(Config.path_prefix + '/ruby-warrior')
+        if File.exist?(Config.path_prefix + "/ruby-warrior")
           FileUtils.mv(Config.path_prefix + '/ruby-warrior', Config.path_prefix + '/rubywarrior')
         end
         make_game_directory unless File.exist?(Config.path_prefix + '/rubywarrior')
@@ -25,10 +26,10 @@ module RubyWarrior
     end
     
     def make_game_directory
-      if UI.ask("No rubywarrior directory found, would you like to create one?")
+      if UI.ask(R18n.t.directory.not_found)
         Dir.mkdir(Config.path_prefix + '/rubywarrior')
       else
-        UI.puts "Unable to continue without directory."
+        UI.puts R18n.t.directory.cannot_continue
         exit
       end
     end
@@ -54,11 +55,11 @@ module RubyWarrior
     
     def play_normal_mode
       if Config.practice_level
-        UI.puts "Unable to practice level while not in epic mode, remove -l option."
+        UI.puts R18n.t.practice_level.unable_not_in_epic_mode
       else
         if current_level.number.zero?
           prepare_next_level
-          UI.puts "First level has been generated. See the rubywarrior/#{profile.directory_name}/README for instructions."
+          UI.puts R18n.t.first_level_generated(profile.directory_name)
         else
           play_current_level
         end
@@ -68,13 +69,13 @@ module RubyWarrior
     def play_current_level
       continue = true
       current_level.load_player
-      UI.puts "Starting Level #{current_level.number}"
+      UI.puts R18n.t.level.starting(current_level.number)
       current_level.play
       if current_level.passed?
         if next_level.exists?
-          UI.puts "Success! You have found the stairs."
+          UI.puts R18n.t.stairs.found
         else
-          UI.puts "CONGRATULATIONS! You have climbed to the top of the tower and rescued the fair maiden Ruby."
+          UI.puts R18n.t.end_of_game
           continue = false
         end
         current_level.tally_points
@@ -85,8 +86,8 @@ module RubyWarrior
         end
       else
         continue = false
-        UI.puts "Sorry, you failed level #{current_level.number}. Change your script and try again."
-        if !Config.skip_input? && current_level.clue && UI.ask("Would you like to read the additional clues for this level?")
+        UI.puts R18n.t.level.failed(current_level.number)
+        if !Config.skip_input? && current_level.clue && UI.ask(R18n.t.level.clues)
           UI.puts current_level.clue.hard_wrap
         end
       end
@@ -94,16 +95,16 @@ module RubyWarrior
     end
     
     def request_next_level
-      if !Config.skip_input? && (next_level.exists? ? UI.ask("Would you like to continue on to the next level?") : UI.ask("Would you like to continue on to epic mode?"))
+      if !Config.skip_input? && (next_level.exists? ? UI.ask(R18n.t.level.continue_next) : UI.ask(R18n.t.level.continue_epic_mode))
         if next_level.exists?
           prepare_next_level
-          UI.puts "See the updated README in the rubywarrior/#{profile.directory_name} directory."
+          UI.puts R18n.t.readme.see_updated(profile.directory_name)
         else
           prepare_epic_mode
-          UI.puts "Run rubywarrior again to play epic mode."
+          UI.puts R18n.t.to_play_epic_mode
         end
       else
-        UI.puts "Staying on current level. Try to earn more points next time."
+        UI.puts R18n.t.level.staying_on_current
       end
     end
     
@@ -122,8 +123,8 @@ module RubyWarrior
     def go_back_to_normal_mode
       profile.enable_normal_mode
       prepare_next_level
-      UI.puts "Another level has been added since you started epic, going back to normal mode."
-      UI.puts "See the updated README in the rubywarrior/#{profile.directory_name} directory."
+      UI.puts R18n.t.mode.back_to_normal
+      UI.puts R18n.t.readme.see_updated(profile.directory_name)
     end
     
     
@@ -143,8 +144,8 @@ module RubyWarrior
     
     def new_profile
       profile = Profile.new
-      profile.tower_path = UI.choose('tower', towers).path
-      profile.warrior_name = UI.request('Enter a name for your warrior: ')
+      profile.tower_path = UI.choose(R18n.t.game.tower, towers).path
+      profile.warrior_name = UI.request(R18.t.warrior.enter_name)
       profile
     end
     
@@ -173,11 +174,11 @@ module RubyWarrior
     def final_report
       if profile.calculate_average_grade && !Config.practice_level
         report = ""
-        report << "Your average grade for this tower is: #{Level.grade_letter(profile.calculate_average_grade)}\n\n"
+        report << R18n.t.game.average_grade_for_tower(Level.grade_letter(profile.calculate_average_grade))
         profile.current_epic_grades.keys.sort.each do |level|
-          report << "  Level #{level}: #{Level.grade_letter(profile.current_epic_grades[level])}\n"
+          report << "  #{R18n.t.level.number(level)} #{Level.grade_letter(profile.current_epic_grades[level])}\n"
         end
-        report << "\nTo practice a level, use the -l option:\n\n  rubywarrior -l 3"
+        report << R18n.t.level.to_practice
         report
       end
     end
@@ -185,15 +186,15 @@ module RubyWarrior
     private
     
     def choose_profile # REFACTORME
-      profile = UI.choose('profile', profiles + [[:new, 'New Profile']])
+      profile = UI.choose(R18n.t.profile.profile, profiles + [[:new, R18n.t.profile.new]])
       if profile == :new
         profile = new_profile
         if profiles.any? { |p| p.player_path == profile.player_path }
-          if UI.ask("Are you sure you want to replace your existing profile for this tower?")
-            UI.puts "Replacing existing profile."
+          if UI.ask(R18n.t.profile.replace_existing_for_tower)
+            UI.puts R18n.t.profile.replace_existing
             profile
           else
-            UI.puts "Not replacing profile."
+            UI.puts R18n.t.profile.not_replacing
             exit
           end
         else
