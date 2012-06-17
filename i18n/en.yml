@@ -61,6 +61,8 @@ sludge:
   first_letter: s
 archer:
   first_letter: a
+thick_sludge:
+  first_letter: S
 take_damage_health_left: takes %1 damage, %2 health power left
 player:
   dies: dies

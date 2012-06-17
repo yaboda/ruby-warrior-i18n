@@ -6,7 +6,7 @@ module RubyWarrior
       end
       
       def character
-        "S"
+        "#{R18n.t.thick_sludge.first_letter}"
       end
     end
   end
