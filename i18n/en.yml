@@ -59,6 +59,8 @@ wall: wall
 nothing: nothing
 sludge:
   first_letter: s
+archer:
+  first_letter: a
 take_damage_health_left: takes %1 damage, %2 health power left
 player:
   dies: dies
