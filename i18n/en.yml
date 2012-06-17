@@ -38,3 +38,9 @@ score:
   score: score
   epic: epic score
   first: first score
+answer:
+  yes_no: yn
+  y: y
+  n: n
+item:
+  choose_typing_number: Choose %1 by typing the number: 

@@ -25,7 +25,7 @@ module RubyWarrior
       end
       
       def ask(msg)
-        request("#{msg} [yn] ") == 'y'
+        request("#{msg} [#{R18n.t.answer.yes_no}] ") == R18n.t.answer.y
       end
       
       # REFACTORME
@@ -40,7 +40,7 @@ module RubyWarrior
               puts "[#{i+1}] #{option}"
             end
           end
-          choice = request("Choose #{item} by typing the number: ")
+          choice = request(R18n.t.item.choose_typing_number(item))
           response = options[choice.to_i-1]
         end
         if response.kind_of? Array
