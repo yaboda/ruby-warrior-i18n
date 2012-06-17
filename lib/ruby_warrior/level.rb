@@ -49,7 +49,7 @@ module RubyWarrior
       load_level
       turns.times do |n|
         return if passed? || failed?
-        UI.puts "- turn #{n+1} -"
+        UI.puts "- #{R18n.t.turn} #{n+1} -"
         UI.print @floor.character
         @floor.units.each { |unit| unit.prepare_turn }
         @floor.units.each { |unit| unit.perform_turn }
@@ -61,24 +61,24 @@ module RubyWarrior
     def tally_points
       score = 0
       
-      UI.puts "Level Score: #{warrior.score}"
+      UI.puts "#{R18n.t.level.score}: #{warrior.score}"
       score += warrior.score
       
-      UI.puts "Time Bonus: #{time_bonus}"
+      UI.puts "#{R18n.t.bonus.time}: #{time_bonus}"
       score += @time_bonus
       
       if floor.other_units.empty?
-        UI.puts "Clear Bonus: #{clear_bonus}"
+        UI.puts "#{R18n.t.bonus.clear}: #{clear_bonus}"
         score += clear_bonus
       end
       
       if @profile.epic?
-        UI.puts "Level Grade: #{grade_for(score)}" if grade_for(score)
-        UI.puts "Total Score: " + score_calculation(@profile.current_epic_score, score)
+        UI.puts "#{R18n.t.level.grade}: #{grade_for(score)}" if grade_for(score)
+        UI.puts "#{R18n.t.score.total}: " + score_calculation(@profile.current_epic_score, score)
         @profile.current_epic_grades[@number] = (score / ace_score.to_f) if ace_score
         @profile.current_epic_score += score
       else
-        UI.puts "Total Score: " + score_calculation(@profile.score, score)
+        UI.puts "#{R18n.t.score.total}: " + score_calculation(@profile.score, score)
         @profile.score += score
         @profile.abilities = warrior.abilities.keys
       end

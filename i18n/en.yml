@@ -17,6 +17,8 @@ level:
   continue_epic_mode: Would you like to continue on to epic mode?
   staying_on_current: Staying on current level. Try to earn more points next time.
   to_practice: \nTo practice a level, use the -l option:\n\n  rubywarrior -l 3
+  score: Level Score
+  grade: Level Grade
 profile:
   profile: profile
   new: New Profile
@@ -38,9 +40,14 @@ score:
   score: score
   epic: epic score
   first: first score
+  total: Total Score
 answer:
   yes_no: yn
   y: y
   n: n
 item:
   choose_typing_number: "Choose %1 by typing the number: "
+turn: turn
+bonus:
+  time: Time Bonus
+  clear: Clear Bonus
