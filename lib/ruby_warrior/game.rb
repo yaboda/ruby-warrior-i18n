@@ -145,7 +145,7 @@ module RubyWarrior
     def new_profile
       profile = Profile.new
       profile.tower_path = UI.choose(R18n.t.game.tower, towers).path
-      profile.warrior_name = UI.request(R18.t.warrior.enter_name)
+      profile.warrior_name = UI.request(R18n.t.warrior.enter_name)
       profile
     end
     
