@@ -48,6 +48,7 @@ answer:
 item:
   choose_typing_number: "Choose %1 by typing the number: "
 turn: turn
+only_one_turn: Only one action can be performed per turn.
 bonus:
   time: Time Bonus
   clear: Clear Bonus

@@ -20,7 +20,7 @@ module RubyWarrior
     def add_action(action)
       instance_eval <<-EOS
         def #{action}(*args)
-          raise "Only one action can be performed per turn." if @action
+          raise "#{R18n.t.only_one_turn}" if @action
           @action = [:#{action}, *args]
         end
       EOS
