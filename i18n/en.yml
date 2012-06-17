@@ -52,3 +52,5 @@ only_one_turn: Only one action can be performed per turn.
 bonus:
   time: Time Bonus
   clear: Clear Bonus
+wall: wall
+nothing: nothing

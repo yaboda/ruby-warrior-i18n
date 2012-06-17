@@ -62,9 +62,9 @@ module RubyWarrior
       if unit
         unit.to_s
       elsif wall?
-        'wall'
+        R18n.t.wall
       else
-        'nothing'
+        R18n.t.nothing
       end
     end
   end
