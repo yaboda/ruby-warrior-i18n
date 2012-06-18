@@ -36,7 +36,7 @@ module RubyWarrior
       
       def verify_direction(direction)
         unless Position::RELATIVE_DIRECTIONS.include? direction
-          raise R18n.t.direction.unknown
+          raise R18n.t.direction.unknown(direction.inspect)
         end
       end
     end

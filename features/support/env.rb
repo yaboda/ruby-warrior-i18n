@@ -1,13 +1,10 @@
 require 'cucumber'
 require 'rspec'
-require 'bundler/setup'
-Bundler.setup
-require 'r18n-core'
+
+require File.dirname(__FILE__) + '/../../lib/ruby_warrior'
 
 R18n.default_places = './i18n/'
 R18n.set('en')
-
-require File.dirname(__FILE__) + '/../../lib/ruby_warrior'
 
 Before do
   RubyWarrior::Config.reset

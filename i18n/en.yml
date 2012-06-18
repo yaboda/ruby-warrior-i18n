@@ -17,7 +17,7 @@ mode:
   back_to_normal: Another level has been added since you started epic, going back to normal mode.
 level:
   level: level
-  number: "Level %1: "
+  number: "Level %1:"
   starting: Starting Level %1
   failed: Sorry, you failed level %1. Change your script and try again.
   clues: Would you like to read the additional clues for this level?
@@ -42,7 +42,7 @@ readme:
 to_play_epic_mode: Run rubywarrior again to play epic mode.
 game:
   tower: tower
-  average_grade_for_tower: "Your average grade for this tower is: %1"
+  average_grade_for_tower: "Your average grade for this tower is: %1 "
 warrior:
   warrior: warrior
   enter_name: "Enter a name for your warrior: "
