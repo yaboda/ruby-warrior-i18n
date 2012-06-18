@@ -25,7 +25,7 @@ module RubyWarrior
       end
       
       def ask(msg)
-        request("#{msg} [#{R18n.t.answer.yes_no}] ") == R18n.t.answer.y
+        request("#{msg} [#{R18n.t.answer.yes_no}] ") == R18n.t.answer.yes_initial
       end
       
       # REFACTORME

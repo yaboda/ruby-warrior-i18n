@@ -48,8 +48,8 @@ score:
   total: Total Score
 answer:
   yes_no: yn
-  y: y
-  n: n
+  yes_initial: y
+  no_initial: n
 item:
   choose_typing_number: "Choose %1 by typing the number: "
 turn: turn
