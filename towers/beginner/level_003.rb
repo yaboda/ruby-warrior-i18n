@@ -2,9 +2,11 @@
 # |@ s ss s>|
 #  ---------
 
-description "The air feels thicker than before. There must be a horde of sludge."
-tip "Be careful not to die! Use warrior.health to keep an eye on your health, and warrior.rest! to earn 10% of max health back."
-clue "When there is no enemy ahead of you call warrior.rest! until health is full before walking forward."
+t = R18n.t.towers.beginner.level_003
+
+description "#{t.description}"
+tip "#{t.tip}"
+clue "#{t.clue}"
 
 time_bonus 35
 ace_score 71

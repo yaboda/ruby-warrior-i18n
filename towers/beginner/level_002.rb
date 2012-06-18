@@ -1,10 +1,11 @@
 #  --------
 # |@   s  >|
 #  --------
+t = R18n.t.towers.beginner.level_002
 
-description "It is too dark to see anything, but you smell sludge nearby."
-tip "Use warrior.feel.empty? to see if there is anything in front of you, and warrior.attack! to fight it. Remember, you can only do one action (ending in !) per turn."
-clue "Add an if/else condition using warrior.feel.empty? to decide whether to warrior.attack! or warrior.walk!."
+description "#{t.description}"
+tip "#{t.tip}"
+clue "#{t.clue}"
 
 time_bonus 20
 ace_score 26

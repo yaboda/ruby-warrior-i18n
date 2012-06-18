@@ -2,9 +2,11 @@
 # |@  Cww>|
 #  -------
 
-description "You hear the mumbling of wizards. Beware of their deadly wands! Good thing you found a bow."
-tip "Use warrior.look to determine your surroundings, and warrior.shoot! to fire an arrow."
-clue "Wizards are deadly but low in health. Kill them before they have time to attack."
+t = R18n.t.towers.beginner.level_008
+
+description "#{t.description}"
+tip "#{t.tip}"
+clue "#{t.clue}"
 
 time_bonus 20
 ace_score 46

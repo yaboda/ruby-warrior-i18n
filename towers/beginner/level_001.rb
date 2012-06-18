@@ -2,8 +2,10 @@
 # |@      >|
 #  --------
 
-description "You see before yourself a long hallway with stairs at the end. There is nothing in the way."
-tip "Call warrior.walk! to walk forward in the Player 'play_turn' method."
+t = R18n.t.towers.beginner.level_001
+
+description "#{t.description}"
+tip "#{t.tip}"
 
 
 time_bonus 15

@@ -135,3 +135,40 @@ form:
 tip: tip
 hp: HP
 when_you_are_done_run_rubywarrior: When you're done editing player.rb, run the rubywarrior command again.
+add_your_code_here: add your cod jia
+towers: 
+  beginner: 
+    level_001: 
+      description: KAKAKAKYou see before yourself a long hallway with stairs at the end. There is nothing in the way.
+      tip: Call warrior.walk! to walk forward in the Player 'play_turn' method.
+    level_002:
+      description: It is too dark to see anything, but you smell sludge nearby.
+      tip: Use warrior.feel.empty? to see if there is anything in front of you, and warrior.attack! to fight it. Remember, you can only do one action (ending in !) per turn.
+      clue: Add an if/else condition using warrior.feel.empty? to decide whether to warrior.attack! or warrior.walk!.
+    level_003:
+       description: The air feels thicker than before. There must be a horde of sludge.
+       tip: Be careful not to die! Use warrior.health to keep an eye on your health, and warrior.rest! to earn 10% of max health back.
+       clue: When there is no enemy ahead of you call warrior.rest! until health is full before walking forward.
+    level_004:
+       description: You can hear bow strings being stretched.
+       tip: No new abilities this time, but you must be careful not to rest while taking damage. Save a @health instance variable and compare it on each turn to see if you're taking damage.
+       clue: Set @health to your current health at the end of the turn. If this is greater than your current health next turn then you know you're taking damage and shouldn't rest.
+    level_005: 
+       description: You hear cries for help. Captives must need rescuing.
+       tip: Use warrior.feel.captive? to see if there is a captive and warrior.rescue! to rescue him. Don't attack captives.
+       clue: Don't forget to constantly check if you're taking damage. Rest until your health is full if you aren't taking damage.
+    level_006:
+       description: The wall behind you feels a bit further away in this room. And you hear more cries for help.
+       tip: You can walk backward by passing ':backward' as an argument to walk!. Same goes for feel, rescue! and attack!. Archers have a limited attack distance.
+       clue: Walk backward if you are taking damage from afar and do not have enough health to attack. You may also want to consider walking backward until warrior.feel(:backward).wall?.
+    level_007: 
+       description: You feel a wall right in front of you and an opening behind you.
+       tip: You are not as effective at attacking backward. Use warrior.feel.wall? and warrior.pivot! to turn around.
+    level_008: 
+       description: You hear the mumbling of wizards. Beware of their deadly wands! Good thing you found a bow.
+       tip: Use warrior.look to determine your surroundings, and warrior.shoot! to fire an arrow.
+       clue: Wizards are deadly but low in health. Kill them before they have time to attack.
+    level_009:
+       description: Time to hone your skills and apply all of the abilities that you have learned.
+       tip: Watch your back.
+       clue: Don't just keep shooting the bow while you are being attacked from behind.
