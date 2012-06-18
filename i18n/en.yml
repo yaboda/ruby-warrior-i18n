@@ -135,7 +135,7 @@ form:
 tip: tip
 hp: HP
 when_you_are_done_run_rubywarrior: When you're done editing player.rb, run the rubywarrior command again.
-add_your_code_here: add your cod jia
+add_your_code_here: add your code here
 towers: 
   beginner: 
     level_001: 
