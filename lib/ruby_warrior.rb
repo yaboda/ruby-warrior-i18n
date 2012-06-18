@@ -4,6 +4,9 @@ require 'bundler/setup'
 Bundler.setup
 require 'r18n-core'
 
+R18n.default_places = './i18n/'
+R18n.set('en')
+
 require 'set'
 
 require 'ruby_warrior/core_additions'
