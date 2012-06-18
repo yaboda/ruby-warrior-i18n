@@ -4,9 +4,11 @@
 # |ssC |
 #  ----
 
-description "Never before have you seen a room so full of sludge. Start the fireworks!"
-tip "Be careful not to let the ticking captive get caught in the flames. Use warrior.distance_of to avoid the captives."
-clue "Be sure to bind the surrounding enemies before fighting. Check your health before detonating explosives."
+t = R18n.t.towers.intermediate.level_009
+
+description t.description
+tip t.tip
+clue t.clue
 
 time_bonus 70
 size 4, 3

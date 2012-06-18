@@ -4,9 +4,11 @@
 # | C |
 #  ---
 
-description "You feel slime on all sides, you're surrounded!"
-tip "Call warrior.bind!(direction) to bind an enemy to keep him from attacking. Bound enemies look like captives."
-clue "Count the number of enemies around you. Bind an enemy if there are two or more."
+t = R18n.t.towers.intermediate.level_003
+
+description t.description
+tip t.tip
+clue t.clue
 
 time_bonus 50
 ace_score 101

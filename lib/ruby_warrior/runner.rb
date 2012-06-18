@@ -20,13 +20,14 @@ module RubyWarrior
     private
     
     def parse_options
+      t = R18n.t.runner.options
       options = OptionParser.new 
-      options.banner = "Usage: rubywarrior [options]"
-      options.on('-d', '--directory DIR', "Run under given directory")  { |dir| Config.path_prefix = dir }
-      options.on('-l', '--level LEVEL',   "Practice level on epic")     { |level| Config.practice_level = level.to_i }
-      options.on('-s', '--skip',          "Skip user input")            { Config.skip_input = true }
-      options.on('-t', '--time SECONDS',  "Delay each turn by seconds") { |seconds| Config.delay = seconds.to_f }
-      options.on('-h', '--help',          "Show this message")          { puts(options); exit }
+      options.banner = t.banner
+      options.on('-d', '--directory DIR', t.directory)  { |dir| Config.path_prefix = dir }
+      options.on('-l', '--level LEVEL',   t.level)      { |level| Config.practice_level = level.to_i }
+      options.on('-s', '--skip',          t.skip)       { Config.skip_input = true }
+      options.on('-t', '--time SECONDS',  t.time)       { |seconds| Config.delay = seconds.to_f }
+      options.on('-h', '--help',          t.help)       { puts(options); exit }
       options.parse!(@arguments)
     end
   end

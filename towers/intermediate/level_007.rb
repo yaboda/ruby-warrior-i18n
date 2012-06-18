@@ -4,9 +4,11 @@
 # | s   |
 #  -----
 
-description "Another ticking sound, but some sludge is blocking the way."
-tip "Quickly kill the sludge and rescue the captive before the bomb goes off. You can't simply go around them."
-clue "Determine the direction of the ticking captive and kill any enemies blocking that path. You may need to bind surrounding enemies first."
+t = R18n.t.towers.intermediate.level_007
+
+description t.description
+tip t.tip
+clue t.clue
 
 time_bonus 70
 ace_score 134

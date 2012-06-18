@@ -5,8 +5,10 @@
 # |  >   |
 #  ------
 
-description "Silence. The room feels large, but empty. Luckily you have a map of this tower to help find the stairs."
-tip "Use warrior.direction_of_stairs to determine which direction stairs are located. Pass this to warrior.walk! to walk in that direction."
+t = R18n.t.towers.intermediate.level_001
+
+description t.description
+tip t.tip
 
 time_bonus 20
 ace_score 19
