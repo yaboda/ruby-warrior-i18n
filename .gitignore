@@ -2,4 +2,4 @@ tmp/**/*
 *.gem
 .project
 .buildpath
-Gemfile.lock
+.rvmrc
