@@ -1,18 +1,18 @@
-Level <%= level.number %>
+<%= R18n.t.level.level.capitalize %> <%= level.number %>
 
 <%= level.description %>
 
-Tip: <%= level.tip %>
+<%= R18n.t.tip.capitalize %>: <%= level.tip %>
 
 <%= level.floor.character -%>
 
-  > = Stairs
+  > = <%= R18n.t.stairs.stairs.capitalize %>
 <%- for unit in level.floor.unique_units -%>
-  <%= unit.character %> = <%= unit.name %> (<%= unit.max_health %> HP)
+  <%= unit.character %> = <%= unit.name %> (<%= unit.max_health %> <%= R18n.t.hp %>)
 <%- end -%>
 
 
-Warrior Abilities:
+<%= R18n.t.warrior.abilities %>:
 <%- level.warrior.abilities.each do |name, ability| -%>
 
   warrior.<%= name %>
@@ -21,7 +21,7 @@ Warrior Abilities:
 <%- if level.warrior.has_golem? -%>
 
 
-Golem Abilities:
+<% R18n.t.golem.abilities %>:
 <%- level.warrior.base_golem.abilities.each do |name, ability| -%>
 
   golem.<%= name %>
@@ -30,4 +30,4 @@ Golem Abilities:
 <%- end -%>
 
 
-When you're done editing player.rb, run the rubywarrior command again.
+<%= R18n.t.when_you_are_done_run_rubywarrior %>

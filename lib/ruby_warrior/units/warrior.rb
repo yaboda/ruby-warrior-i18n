@@ -38,7 +38,7 @@ module RubyWarrior
         if @name && !@name.empty?
           @name
         else
-          "#{R18n.t.warrior.capitalized}"
+          "#{R18n.t.warrior.warrior.capitalize}"
         end
       end
       

@@ -26,6 +26,7 @@ profile:
   replace_existing: Replacing existing profile.
   not_replacing: Not replacing profile.
 stairs:
+  stairs: stairs
   found: Success! You have found the stairs.
 end_of_game: CONGRATULATIONS! You have climbed to the top of the tower and rescued the fair maiden Ruby.
 readme:
@@ -35,10 +36,11 @@ game:
   tower: tower
   average_grade_for_tower: "Your average grade for this tower is: %1"
 warrior:
-  capitalized: Warrior
+  warrior: warrior
   enter_name: "Enter a name for your warrior: "
   earns_points: earns %1 points
   does_nothing: does nothing
+  abilities: Warrior Abilities
 score: 
   score: score
   epic: epic score
@@ -69,6 +71,7 @@ wizard:
   first_letter: w
 golem:
   first_letter: G
+  abilities: Golem Abilities
 take_damage_health_left: takes %1 damage, %2 health power left
 player:
   dies: dies
@@ -79,7 +82,6 @@ direction:
   bumps_into: bumps into
 walk:
   walk: walk
-  capitalized: Walk
   s: walks
 attack:
   in_given_direction: Attacks a unit in given direction (forward by default).
@@ -130,3 +132,6 @@ form:
   description: Forms a golem in given direction taking half of invoker's health. The passed block is executed for each golem turn.
   golem_gives_health: forms a golem %1 and gives half of his health (%2)
   fails: fails to form golem because something is blocking the way.
+tip: tip
+hp: HP
+when_you_are_done_run_rubywarrior: When you're done editing player.rb, run the rubywarrior command again.
