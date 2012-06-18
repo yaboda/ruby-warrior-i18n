@@ -3,3 +3,4 @@ tmp/**/*
 .project
 .buildpath
 .rvmrc
+rubywarrior/
