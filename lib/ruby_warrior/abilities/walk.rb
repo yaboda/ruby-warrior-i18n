@@ -8,7 +8,7 @@ module RubyWarrior
       def perform(direction = :forward)
         verify_direction(direction)
         if @unit.position
-          @unit.say "#{R18n.t.walk.s} #{direction}"
+          @unit.say "#{R18n.t.walk.s} #{R18n.t.direction[direction]}"
           if space(direction).empty?
             @unit.position.move(*offset(direction))
           else

@@ -68,19 +68,19 @@ turn: turno
 only_one_turn: Sólo se puede realizar una acción por turno.
 bonus:
   time: Bono de tiempo
-  clear: Clear Bonus (TRADUCE ME)
-wall: pared
+  clear: Clear Bonus (TRADUCEME)
+wall: la pared
 nothing: nada
 sludge:
-  first_letter: l
+  first_letter: m
 archer:
   first_letter: a
 thick_sludge:
-  first_letter: L
+  first_letter: M
 captive:
   first_letter: C
 wizard:
-  first_letter: M
+  first_letter: H
 golem:
   first_letter: G
   abilities: Habilidades del Golem
@@ -91,10 +91,14 @@ player:
 direction:
   unknown: "Dirección desconocida: %1. Debería ser :forward, :backward, :left o :right."
   move_forward_default: Camina hacia la dirección especificada (adelante, por defecto).
-  bumps_into: choca
+  bumps_into: choca con
+  forward: adelante
+  backward: atrás
+  left: la izquierda
+  right: la derecha
 walk:
   walk: caminar
-  s: camina
+  s: camina hacia
 attack:
   in_given_direction: Ataca una unidad en la dirección especificada (adelante, por defecto).
   and_hits: ataca hacia %1 y golpea a %2
@@ -103,7 +107,7 @@ feel:
   description: Regresa un espacio en la dirección especificada (adelante, por defecto).
 rest:
   description: Recupera 10% de salud, pero no hace nada más.
-  receives_health: recive %1 de salud por descansar, hasta %2 de salud
+  receives_health: recibe %1 de salud por descansar, hasta %2 de salud
   fit_fiddle: está en buen estado físico
 health:
   description: Regresa un número entero representando tu salud.
@@ -154,17 +158,17 @@ towers:
       description: Ves delante de ti un largo pasillo con escaleras al final. No hay nada en el camino.
       tip: Usa warrior.walk! para caminar hacia adelante en el método 'play_turn' de la clase Player.
     level_002:
-      description: It is too dark to see anything, but you smell sludge nearby.
-      tip: Use warrior.feel.empty? to see if there is anything in front of you, and warrior.attack! to fight it. Remember, you can only do one action (ending in !) per turn.
-      clue: Add an if/else condition using warrior.feel.empty? to decide whether to warrior.attack! or warrior.walk!.
+      description: Está muy oscuro y no se puede ver nada, pero hueles sludge muy cerca.
+      tip: Usa warrior.feel.empty? para saber si hay alguien frente a ti, y warrior.attack! para pelar. Recuerda, sólo puedes realizar una acción por turno (terminan en !).
+      clue: Añade una condición if/else usando warrior.feel.empty? para decidir cuándo atacar (warrior.attack!) o caminar (warrior.walk!).
     level_003:
-       description: The air feels thicker than before. There must be a horde of sludge.
-       tip: Be careful not to die! Use warrior.health to keep an eye on your health, and warrior.rest! to earn 10% of max health back.
-       clue: When there is no enemy ahead of you call warrior.rest! until health is full before walking forward.
+       description: El aire se siente más pesado que antes. Debe haber una horda de sludge.
+       tip: Cuídate mucho para no morir! Usa warrior.health ver el nivel de tu salud y descansa usando warrior.rest! para recuperar 10% de tu salud.
+       clue: Cuando no hay enemigos frente a ti descansa usando warrior.rest! hasta que tu salud se haya recuperado antes de seguir avanzando.
     level_004:
-       description: You can hear bow strings being stretched.
-       tip: No new abilities this time, but you must be careful not to rest while taking damage. Save a @health instance variable and compare it on each turn to see if you're taking damage.
-       clue: Set @health to your current health at the end of the turn. If this is greater than your current health next turn then you know you're taking damage and shouldn't rest.
+       description: Puedes escuchar las cuerdas de los arcos tensándose.
+       tip: No tienes nuevas habilidades esta vez, pero debes tener cuidado de no descansar cuando estés siendo atacado. Usa una variable de instancia @health y compárala en cada turno para ver si alguien te está atacando.
+       clue: Guarda tu nivel actual de salud en @health al final de cada turno. Si ésta es mayor que tu nivel de salud en el siguiente turno sabrás que estás siendo atacado y no deberías descansar en dado caso.
     level_005: 
        description: You hear cries for help. Captives must need rescuing.
        tip: Use warrior.feel.captive? to see if there is a captive and warrior.rescue! to rescue him. Don't attack captives.

@@ -9,7 +9,7 @@ module RubyWarrior
         verify_direction(direction)
         receiver = unit(direction)
         if receiver
-          @unit.say "#{R18n.t.attack.and_hits(direction, receiver)}"
+          @unit.say "#{R18n.t.attack.and_hits(R18n.t.direction[direction], receiver)}"
           if direction == :backward
             power = (@unit.attack_power/2.0).ceil
           else
@@ -17,7 +17,7 @@ module RubyWarrior
           end
           damage(receiver, power)
         else
-          @unit.say "#{R18n.t.attack.and_hits_nothing(direction)}"
+          @unit.say "#{R18n.t.attack.and_hits_nothing(R18n.t.direction[direction])}"
         end
       end
     end
