@@ -7,7 +7,7 @@ module RubyWarrior
     end
     
     def name
-      File.basename(path)
+      R18n.t.level[File.basename(path)]
     end
     alias_method :to_s, :name
   end

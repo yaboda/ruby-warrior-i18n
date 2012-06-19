@@ -27,6 +27,10 @@ level:
   to_practice: \nPara practicar un nivel usa la opción -l:\n\n  rubywarrior -l 3
   score: Marcador del nivel
   grade: Grado del nivel
+  beginner: principiante
+  intermediate: intermedio
+  short: corto
+  tower: torre
 profile:
   profile: perfil
   new: Nuevo perfil

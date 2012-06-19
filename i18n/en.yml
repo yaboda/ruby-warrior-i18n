@@ -27,6 +27,10 @@ level:
   to_practice: \nTo practice a level, use the -l option:\n\n  rubywarrior -l 3
   score: Level Score
   grade: Level Grade
+  beginner: beginner
+  intermediate: intermediate
+  short: short
+  tower: tower
 profile:
   profile: profile
   new: New Profile
