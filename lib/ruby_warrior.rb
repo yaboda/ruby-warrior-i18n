@@ -2,10 +2,9 @@ $: << File.dirname(__FILE__)
 
 require 'bundler/setup'
 Bundler.setup
-require 'r18n-core'
+require 'r18n-desktop'
 
-R18n.default_places = './i18n/'
-R18n.set('en')
+R18n.from_env('./i18n/', ENV['LANG'])
 
 require 'set'
 
