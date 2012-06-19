@@ -151,7 +151,7 @@ add_your_code_here: añade tu código aquí
 towers: 
   beginner: 
     level_001: 
-      description: Ves delante de ti un largo pasillo con escaleras al final. No nada en el camino.
+      description: Ves delante de ti un largo pasillo con escaleras al final. No hay nada en el camino.
       tip: Usa warrior.walk! para caminar hacia adelante en el método 'play_turn' de la clase Player.
     level_002:
       description: It is too dark to see anything, but you smell sludge nearby.
