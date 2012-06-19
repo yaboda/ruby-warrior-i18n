@@ -1,1 +1,219 @@
+runner:
+  options:
+    banner: "Uso: rubywarrior [opciones]"
+    directory: Ejecutar bajo el directorio especificado
+    level: Practice level on epic
+    skip: Ignorar datos ingresados por el usuario
+    time: Retardo en segundos de cada turno
+    help: Muestra este mensaje
 welcome: Bienvenido a Guerrero Ruby
+directory:
+  not_found: No se encontró el directorio rubywarrior, quieres crearlo?
+  cannot_continue: No se puede continuar sin el directorio.
+practice_level:
+  unable_not_in_epic_mode: No se puede practicar nivel si no se está en Modo Épico, no uses la opción -l.
+first_level_generated: El primer nivel ha sido generado. Consulta las instrucciones en el archivo rubyywarrior/%1/README.
+mode:
+  back_to_normal: Se ha añadido otro nivel desde que empezaste en Modo Épico, regresando al modo normal.
+level:
+  level: nivel
+  number: "Nivel %1:"
+  starting: Empezando el Nivel %1
+  failed: Lo siento, no has logrado pasar el nivel %1. Cambia tu script e intenta de nuevo.
+  clues: Te gustaría leer más pistas para pasar este nivel?
+  continue_next: Quieres avanzar al siguiente nivel?
+  continue_epic_mode: Quieres avanzar al Modo Épico?
+  staying_on_current: Nos quedaremos en el nivel actual. Intenta ganar más puntos la siguiente vez
+  to_practice: \nPara practicar un nivel usa la opción -l:\n\n  rubywarrior -l 3
+  score: Marcador del nivel
+  grade: Grado del nivel
+profile:
+  profile: perfil
+  new: Nuevo perfil
+  replace_existing_for_tower: Estás seguro de querer reemplazar tu perfil existente para esta torre?
+  replace_existing: Reemplazando perfil existente.
+  not_replacing: Omitiendo reemplazo del perfil.
+stairs:
+  stairs: escaleras
+  found: Excelente! Has encontrado las escaleras.
+end_of_game: FELICIDADES! Has escalado a la cima de la torre y rescatado a la hermosa Ruby.
+readme:
+  see_updated: Se ha actualizado el archivo README en el directorio rubywarrior/%1. Consulta las nuevas instrucciones.
+to_play_epic_mode: Ejecuta rubywarrior de nuevo para jugar en Modo Épico.
+game:
+  tower: torre
+  average_grade_for_tower: "Tu grado promedio para esta torre es: %1 "
+warrior:
+  warrior: guerrero
+  enter_name: "Escribe el nombre de tu guerrero: "
+  earns_points: gana %1 puntos
+  does_nothing: no hace nada
+  abilities: Habilidades del guerrero
+score: 
+  score: marcador
+  epic: marcador Modo Épico
+  first: primer marcador
+  total: Marcador total
+answer:
+  yes_no: sn
+  yes_initial: s
+  no_initial: n
+item:
+  choose_typing_number: "Escoge %1 escribiendo un número: "
+turn: turno
+only_one_turn: Sólo se puede realizar una acción por turno.
+bonus:
+  time: Bono de tiempo
+  clear: Clear Bonus (TRADUCE ME)
+wall: pared
+nothing: nada
+sludge:
+  first_letter: l
+archer:
+  first_letter: a
+thick_sludge:
+  first_letter: L
+captive:
+  first_letter: C
+wizard:
+  first_letter: M
+golem:
+  first_letter: G
+  abilities: Habilidades del Golem
+take_damage_health_left: recibe %1 de daño, quedan %2 puntos de salud
+player:
+  dies: muere
+  released_from_bonds: desatado
+direction:
+  unknown: "Dirección desconocida: %1. Debería ser :forward, :backward, :left o :right."
+  move_forward_default: Muévete en la dirección dada (forward, por defecto).
+  bumps_into: choca
+walk:
+  walk: caminar
+  s: camina
+attack:
+  in_given_direction: Ataca una unidad en la dirección especificada (forward, por defecto).
+  and_hits: ataca hacia %1 y golpea a %2
+  and_hits_nothing: ataca hacia %1 y no golpea a nadie
+feel:
+  description: Regresa un espacio en la dirección especificada (forward, por defecto).
+rest:
+  description: Recupera 10% de salud, pero no hace nada más.
+  receives_health: recive %1 de salud por descansar, hasta %2 de salud
+  fit_fiddle: está en buen estado físico
+health:
+  description: Regresa un número entero representando tu salud.
+look:
+  description: Regresa una matriz de hasta tres Espacios en la dirección especificada (forward, por defecto).
+shoot:
+  description: Dispara arco y flecha en la dirección especificada (forward, por defecto).
+  and_hits: dispara hacia %1 y golpea a %2
+  and_hits_nothing: dispara y no golpea a nadie
+rescue:
+  description: Rescata a cautivo de su prisión (ganando 20 puntos) en la dirección especificada (forward, por defecto).
+  unbinds_and_rescues: desata a %1 y rescata a %2
+  unbinds_and_rescues_nothing: desata a %1 pero no restaca a nadie
+rotate:
+  description: Rota hacia :left, :right or :backward (por defecto)
+  pivots: pivotes
+distance_of:
+  description: Pasa un Espacio como argumento, y regresará un número entero representando la distancia hacie ese espacio.
+bind:
+  description: Binds a unit in given direction to keep him from moving (forward by default).
+  and_restricts: binds %1 and restricts %2
+  and_restricts_nothing: binds %1 and restricts nothing 
+listen:
+  description: Regresa una matriz con todos los espacios los cuales tengan unidades.
+direction_of_stairs:
+  description: Regresa la dirección (:left, :right, :forward, :backward) en la que están las escaleras desde tu ubicación.
+direction_of: 
+  description: Pasa un espacio como argumento, y la dirección (:left, :right, :forward, :backward) hacia ese espacio será regresada.
+explode: 
+  description: Te mata a ti y a todas las unidades alrededor. Probablemente no quieras hacer esto intencionalmente.
+  collapsing_the_ceiling: explota, colapsando el techo e hiriendo a todas las unidades.
+  is_ticking: esta haciendo tic tac
+detonate: 
+  description: Detona una bomba en la dirección especificada (forward by default) que daña a ese espacio y los 4 espacios al rededor (incluido tú). 
+  bomb_deadly_explosion: detonates a bomb %1 launching a deadly explosion.
+  ticking_explosive: caught in bomb's flames which detonates ticking explosive
+form:
+  description: Forms a golem in given direction taking half of invoker's health. The passed block is executed for each golem turn.
+  golem_gives_health: forms a golem %1 and gives half of his health (%2)
+  fails: fails to form golem because something is blocking the way.
+tip: tip
+hp: HP
+when_you_are_done_run_rubywarrior: Cuanda hayas terminado de editar player.rb, ejecuta rubywarrior de nuevo.
+add_your_code_here: añade tu código aquí
+towers: 
+  beginner: 
+    level_001: 
+      description: Ves delante de ti un largo pasillo con escaleras al final. No nada en el camino.
+      tip: Usa warrior.walk! para caminar hacia adelante en el método 'play_turn' de la clase Player.
+    level_002:
+      description: It is too dark to see anything, but you smell sludge nearby.
+      tip: Use warrior.feel.empty? to see if there is anything in front of you, and warrior.attack! to fight it. Remember, you can only do one action (ending in !) per turn.
+      clue: Add an if/else condition using warrior.feel.empty? to decide whether to warrior.attack! or warrior.walk!.
+    level_003:
+       description: The air feels thicker than before. There must be a horde of sludge.
+       tip: Be careful not to die! Use warrior.health to keep an eye on your health, and warrior.rest! to earn 10% of max health back.
+       clue: When there is no enemy ahead of you call warrior.rest! until health is full before walking forward.
+    level_004:
+       description: You can hear bow strings being stretched.
+       tip: No new abilities this time, but you must be careful not to rest while taking damage. Save a @health instance variable and compare it on each turn to see if you're taking damage.
+       clue: Set @health to your current health at the end of the turn. If this is greater than your current health next turn then you know you're taking damage and shouldn't rest.
+    level_005: 
+       description: You hear cries for help. Captives must need rescuing.
+       tip: Use warrior.feel.captive? to see if there is a captive and warrior.rescue! to rescue him. Don't attack captives.
+       clue: Don't forget to constantly check if you're taking damage. Rest until your health is full if you aren't taking damage.
+    level_006:
+       description: The wall behind you feels a bit further away in this room. And you hear more cries for help.
+       tip: You can walk backward by passing ':backward' as an argument to walk!. Same goes for feel, rescue! and attack!. Archers have a limited attack distance.
+       clue: Walk backward if you are taking damage from afar and do not have enough health to attack. You may also want to consider walking backward until warrior.feel(:backward).wall?.
+    level_007: 
+       description: You feel a wall right in front of you and an opening behind you.
+       tip: You are not as effective at attacking backward. Use warrior.feel.wall? and warrior.pivot! to turn around.
+    level_008: 
+       description: You hear the mumbling of wizards. Beware of their deadly wands! Good thing you found a bow.
+       tip: Use warrior.look to determine your surroundings, and warrior.shoot! to fire an arrow.
+       clue: Wizards are deadly but low in health. Kill them before they have time to attack.
+    level_009:
+       description: Time to hone your skills and apply all of the abilities that you have learned.
+       tip: Watch your back.
+       clue: Don't just keep shooting the bow while you are being attacked from behind.
+  intermediate: 
+    level_001: 
+      description: Silence. The room feels large, but empty. Luckily you have a map of this tower to help find the stairs.
+      tip: Use warrior.direction_of_stairs to determine which direction stairs are located. Pass this to warrior.walk! to walk in that direction.
+    level_002:
+      description: Another large room, but with several enemies blocking your way to the stairs.
+      tip: Just like walking, you can attack! and feel in multiple directions (:forward, :left, :right, :backward).
+      clue: Call warrior.feel(direction).enemy? in each direction to make sure there isn't an enemy beside you (attack if there is). Call warrior.rest! if you're low and health when there are no enemies around.
+    level_003:
+       description: You feel slime on all sides, you're surrounded!
+       tip: Call warrior.bind!(direction) to bind an enemy to keep him from attacking. Bound enemies look like captives.
+       clue: Count the number of enemies around you. Bind an enemy if there are two or more.
+    level_004:
+       description: Your ears become more in tune with the surroundings. Listen to find enemies and captives!
+       tip: Use warrior.listen to find spaces with other units, and warrior.direction_of to determine what direction they're in.
+       clue: Walk towards an enemy or captive with warrior.walk!(warrior.direction_of(warrior.listen.first)), once warrior.listen.empty? then head for the stairs.
+    level_005: 
+       description: You can feel the stairs right next to you, but are you sure you want to go up them right away?
+       tip: You'll get more points for clearing the level first. Use warrior.feel.stairs? and warrior.feel.empty? to determine where to go.
+       clue: If going towards a unit is the same direction as the stairs, try moving another empty direction until you can safely move toward the enemies.
+    level_006:
+       description: What's that ticking? Some captives have a timed bomb at their feet!
+       tip: Hurry and rescue captives first that have space.ticking?, they'll soon go!
+       clue: Avoid fighting enemies at first. Use warrior.listen and space.ticking? and quickly rescue those captives.
+    level_007: 
+       description: Another ticking sound, but some sludge is blocking the way.
+       tip: Quickly kill the sludge and rescue the captive before the bomb goes off. You can't simply go around them.
+       clue: Determine the direction of the ticking captive and kill any enemies blocking that path. You may need to bind surrounding enemies first.
+    level_008: 
+       description: You discover a satchel of bombs which will help when facing a mob of enemies.
+       tip: Detonate a bomb when you see a couple enemies ahead of you (warrior.look). Watch out for your health too.
+       clue: Calling warrior.look will return an array of Spaces. If the first two contain enemies, detonate a bomb with warrior.detonate!.
+    level_009:
+       description: Never before have you seen a room so full of sludge. Start the fireworks!
+       tip: Be careful not to let the ticking captive get caught in the flames. Use warrior.distance_of to avoid the captives.
+       clue: Be sure to bind the surrounding enemies before fighting. Check your health before detonating explosives.
+
