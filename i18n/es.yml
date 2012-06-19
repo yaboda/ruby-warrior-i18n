@@ -12,7 +12,7 @@ directory:
   cannot_continue: No se puede continuar sin el directorio.
 practice_level:
   unable_not_in_epic_mode: No se puede practicar nivel si no se está en Modo Épico, no uses la opción -l.
-first_level_generated: El primer nivel ha sido generado. Consulta las instrucciones en el archivo rubyywarrior/%1/README.
+first_level_generated: El primer nivel ha sido generado. Consulta las instrucciones en el archivo rubywarrior/%1/README.
 mode:
   back_to_normal: Se ha añadido otro nivel desde que empezaste en Modo Épico, regresando al modo normal.
 level:
@@ -145,7 +145,7 @@ form:
   golem_gives_health: forms a golem %1 and gives half of his health (%2)
   fails: fails to form golem because something is blocking the way.
 tip: tip
-hp: HP
+hp: de salud
 when_you_are_done_run_rubywarrior: Cuanda hayas terminado de editar player.rb, ejecuta rubywarrior de nuevo.
 add_your_code_here: añade tu código aquí
 towers: 
