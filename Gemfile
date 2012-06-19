@@ -1,6 +1,6 @@
 source :rubygems
 
-gem 'r18n-core', :git => 'git://github.com/ai/r18n.git'
+gem 'r18n-desktop', :git => 'git://github.com/ai/r18n.git'
 
 group :test do
   gem 'rake'

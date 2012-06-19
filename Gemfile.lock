@@ -3,6 +3,8 @@ GIT
   revision: 71e783ad7e1040cbf57cfe2737f2abf19b574d1b
   specs:
     r18n-core (0.4.14)
+    r18n-desktop (0.4.14)
+      r18n-core (= 0.4.14)
 
 GEM
   remote: http://rubygems.org/
@@ -36,6 +38,6 @@ PLATFORMS
 DEPENDENCIES
   cucumber
   mocha
-  r18n-core!
+  r18n-desktop!
   rake
   rspec (~> 2.8.0)
