@@ -90,17 +90,17 @@ player:
   released_from_bonds: desatado
 direction:
   unknown: "Dirección desconocida: %1. Debería ser :forward, :backward, :left o :right."
-  move_forward_default: Muévete en la dirección dada (forward, por defecto).
+  move_forward_default: Camina hacia la dirección especificada (adelante, por defecto).
   bumps_into: choca
 walk:
   walk: caminar
   s: camina
 attack:
-  in_given_direction: Ataca una unidad en la dirección especificada (forward, por defecto).
+  in_given_direction: Ataca una unidad en la dirección especificada (adelante, por defecto).
   and_hits: ataca hacia %1 y golpea a %2
   and_hits_nothing: ataca hacia %1 y no golpea a nadie
 feel:
-  description: Regresa un espacio en la dirección especificada (forward, por defecto).
+  description: Regresa un espacio en la dirección especificada (adelante, por defecto).
 rest:
   description: Recupera 10% de salud, pero no hace nada más.
   receives_health: recive %1 de salud por descansar, hasta %2 de salud
@@ -108,13 +108,13 @@ rest:
 health:
   description: Regresa un número entero representando tu salud.
 look:
-  description: Regresa una matriz de hasta tres Espacios en la dirección especificada (forward, por defecto).
+  description: Regresa una matriz de hasta tres Espacios en la dirección especificada (adelante, por defecto).
 shoot:
-  description: Dispara arco y flecha en la dirección especificada (forward, por defecto).
+  description: Dispara arco y flecha en la dirección especificada (adelante, por defecto).
   and_hits: dispara hacia %1 y golpea a %2
   and_hits_nothing: dispara y no golpea a nadie
 rescue:
-  description: Rescata a cautivo de su prisión (ganando 20 puntos) en la dirección especificada (forward, por defecto).
+  description: Rescata a cautivo de su prisión (ganando 20 puntos) en la dirección especificada (adelante, por defecto).
   unbinds_and_rescues: desata a %1 y rescata a %2
   unbinds_and_rescues_nothing: desata a %1 pero no restaca a nadie
 rotate:
@@ -137,7 +137,7 @@ explode:
   collapsing_the_ceiling: explota, colapsando el techo e hiriendo a todas las unidades.
   is_ticking: esta haciendo tic tac
 detonate: 
-  description: Detona una bomba en la dirección especificada (forward by default) que daña a ese espacio y los 4 espacios al rededor (incluido tú). 
+  description: Detona una bomba en la dirección especificada (adelante, por defecto) que daña a ese espacio y los 4 espacios al rededor (incluido tú). 
   bomb_deadly_explosion: detonates a bomb %1 launching a deadly explosion.
   ticking_explosive: caught in bomb's flames which detonates ticking explosive
 form:
@@ -146,7 +146,7 @@ form:
   fails: fails to form golem because something is blocking the way.
 tip: tip
 hp: de salud
-when_you_are_done_run_rubywarrior: Cuanda hayas terminado de editar player.rb, ejecuta rubywarrior de nuevo.
+when_you_are_done_run_rubywarrior: Cuando hayas terminado de editar player.rb, ejecuta rubywarrior de nuevo.
 add_your_code_here: añade tu código aquí
 towers: 
   beginner: 
