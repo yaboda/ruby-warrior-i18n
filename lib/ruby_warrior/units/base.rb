@@ -23,7 +23,7 @@ module RubyWarrior
         unbind if bound?
         if health
           self.health -= amount
-          say R18n.t.take_damage_health_left(amount, health)
+          say R18n.t.take_damage_health_left(amount, health < 0 ? 0 : health)
           if health <= 0
             @position = nil
             say R18n.t.player.dies
@@ -53,7 +53,7 @@ module RubyWarrior
       end
       
       def name
-        self.class.name.split('::').last.titleize
+        R18n.t[self.class.name.split('::').last.downcase].name
       end
       alias_method :to_s, :name
       

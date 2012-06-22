@@ -19,12 +19,12 @@ level:
   level: nivel
   number: "Nivel %1:"
   starting: Empezando el Nivel %1
-  failed: Lo siento, no has logrado pasar el nivel %1. Cambia tu script e intenta de nuevo.
+  failed: Lo siento, no has logrado pasar el nivel %1. Edita player.rb e intenta de nuevo.
   clues: Te gustaría leer más pistas para pasar este nivel?
   continue_next: Quieres avanzar al siguiente nivel?
   continue_epic_mode: Quieres avanzar al Modo Épico?
   staying_on_current: Nos quedaremos en el nivel actual. Intenta ganar más puntos la siguiente vez
-  to_practice: \nPara practicar un nivel usa la opción -l:\n\n  rubywarrior -l 3
+  to_practice: "Para practicar un nivel usa la opción -l:  por ejemplo: $ rubywarrior -l 3"
   score: Marcador del nivel
   grade: Grado del nivel
   beginner: principiante
@@ -72,21 +72,27 @@ bonus:
 wall: la pared
 nothing: nada
 sludge:
+  name: monstruo
   first_letter: s
 archer:
+  name: arquero
   first_letter: a
-thick_sludge:
+thicksludge:
+  name: monstruo gigante
   first_letter: S
 captive:
+  name: rehen
   first_letter: R
 wizard:
+  name: mago
   first_letter: M
 golem:
+  name: golem
   first_letter: G
   abilities: Habilidades del Golem
-take_damage_health_left: recibe %1 de daño, quedan %2 puntos de salud
+take_damage_health_left: recibe %1 de daño, le restan %2 puntos de salud
 player:
-  dies: muere
+  dies: ha muerto!
   released_from_bonds: desatado
 direction:
   unknown: "Dirección desconocida: %1. Debería ser :forward, :backward, :left o :right."
@@ -100,14 +106,14 @@ walk:
   walk: caminar
   s: camina hacia
 attack:
-  in_given_direction: Ataca una unidad en la dirección especificada (adelante, por defecto).
+  in_given_direction: Ataca a un enemigo que está en la dirección especificada (adelante, por defecto).
   and_hits: ataca hacia %1 y golpea a %2
   and_hits_nothing: ataca hacia %1 y no golpea a nadie
 feel:
-  description: Regresa un espacio en la dirección especificada (adelante, por defecto).
+  description: Devuelve el espacio (Space) que está en la dirección especificada (adelante, por defecto).
 rest:
   description: Recupera 10% de salud, pero no hace nada más.
-  receives_health: recibe %1 de salud por descansar, hasta %2 de salud
+  receives_health: recibe %1 de salud por descansar, ahora tiene %2 de salud
   fit_fiddle: está en buen estado físico
 health:
   description: Regresa un número entero representando tu salud.
@@ -122,8 +128,8 @@ rescue:
   unbinds_and_rescues: desata a %1 y rescata a %2
   unbinds_and_rescues_nothing: desata a %1 pero no restaca a nadie
 rotate:
-  description: Gira hacia :left, :right or :backward (por defecto)
-  pivots: pivotes
+  description: Gira hacia :left, :right or :backward (adelante, por defecto)
+  pivots: gira hacia
 distance_of:
   description: Pasa un espacio (Space) como argumento y regresará un número entero representando la distancia hacie ese espacio.
 bind:
@@ -150,20 +156,20 @@ form:
   fails: falla al formar el golem porque algo está bloqueando el camino.
 tip: tip
 hp: de salud
-when_you_are_done_run_rubywarrior: Cuando hayas terminado de editar player.rb, ejecuta rubywarrior de nuevo.
+when_you_are_done_run_rubywarrior: Cuando hayas terminado de editar player.rb ejecuta rubywarrior de nuevo.
 add_your_code_here: añade tu código aquí
 towers: 
   beginner: 
     level_001: 
       description: Ves delante de ti un largo pasillo con escaleras al final. No hay nada en el camino.
-      tip: Usa warrior.walk! para caminar hacia adelante en el método 'play_turn' de la clase Player.
+      tip: Usa warrior.walk! (dentro del método 'play_turn' de la clase Player) para caminar hacia adelante.
     level_002:
-      description: Está muy oscuro y no se puede ver nada, pero hueles sludge muy cerca.
+      description: Está muy oscuro y no se puede ver nada, pero sientes que un monstruo anda cerca.
       tip: Usa warrior.feel.empty? para saber si hay alguien frente a ti y warrior.attack! para pelar. Recuerda, sólo puedes realizar una acción por turno (terminan en !).
       clue: Añade una condición if/else usando warrior.feel.empty? para decidir cuándo atacar (warrior.attack!) o caminar (warrior.walk!).
     level_003:
-       description: El aire se siente más pesado que antes. Debe haber una horda de sludge.
-       tip: Cuídate mucho para no morir! Usa warrior.health ver el nivel de tu salud y descansa usando warrior.rest! para recuperar 10% de tu salud.
+       description: El aire se siente más pesado que antes. Debe haber una horda de monstruos.
+       tip: Cuídate mucho para no morir! Usa warrior.health para ver el nivel de tu salud y descansa usando warrior.rest! para recuperar 10% de tu salud.
        clue: Cuando no hay enemigos frente a ti descansa usando warrior.rest! hasta que tu salud se haya recuperado antes de seguir avanzando.
     level_004:
        description: Puedes escuchar las cuerdas de los arcos tensándose.

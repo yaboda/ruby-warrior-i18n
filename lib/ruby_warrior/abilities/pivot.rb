@@ -10,7 +10,7 @@ module RubyWarrior
       def perform(direction = :backward)
         verify_direction(direction)
         @unit.position.rotate(ROTATION_DIRECTIONS.index(direction))
-        @unit.say "#{R18n.t.rotate.pivots} #{direction}"
+        @unit.say "#{R18n.t.rotate.pivots} #{R18n.t.direction[direction]}"
       end
     end
   end

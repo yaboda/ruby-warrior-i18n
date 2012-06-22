@@ -24,7 +24,7 @@ level:
   continue_next: Would you like to continue on to the next level?
   continue_epic_mode: Would you like to continue on to epic mode?
   staying_on_current: Staying on current level. Try to earn more points next time.
-  to_practice: \nTo practice a level, use the -l option:\n\n  rubywarrior -l 3
+  to_practice: "To practice a level, use the -l option:  rubywarrior -l 3"
   score: Level Score
   grade: Level Grade
   beginner: beginner
@@ -72,16 +72,22 @@ bonus:
 wall: wall
 nothing: nothing
 sludge:
+  name: sludge
   first_letter: s
 archer:
+  name: archer
   first_letter: a
-thick_sludge:
+thicksludge:
+  name: thick sludge
   first_letter: S
 captive:
+  name: captive
   first_letter: C
 wizard:
+  name: wizard
   first_letter: w
 golem:
+  name: golem
   first_letter: G
   abilities: Golem Abilities
 take_damage_health_left: takes %1 damage, %2 health power left

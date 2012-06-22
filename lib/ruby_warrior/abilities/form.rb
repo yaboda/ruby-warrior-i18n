@@ -15,7 +15,7 @@ module RubyWarrior
           golem.turn = block
           @unit.health -= health
           @unit.position.floor.add(golem, x, y, @unit.position.direction)
-          @unit.say "#{R18n.t.form.golem_gives_health(direction, health)}"
+          @unit.say "#{R18n.t.form.golem_gives_health(R18n.t.direction[direction], health)}"
         else
           @unit.say "#{R18n.t.form.fails}"
         end

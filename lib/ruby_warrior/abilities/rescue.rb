@@ -9,7 +9,7 @@ module RubyWarrior
         verify_direction(direction)
         if space(direction).captive?
           recipient = unit(direction)
-          @unit.say "#{R18n.t.rescue.unbinds_and_rescues(direction, recipient)}"
+          @unit.say "#{R18n.t.rescue.unbinds_and_rescues(R18n.t.direction[direction], recipient)}"
           recipient.unbind
           if recipient.kind_of? Units::Captive
             recipient.position = nil

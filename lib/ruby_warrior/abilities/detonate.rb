@@ -8,7 +8,7 @@ module RubyWarrior
       def perform(direction = :forward)
         verify_direction(direction)
         if @unit.position
-          @unit.say "#{R18n.t.detonate.bomb_deadly_explosion(direction)}"
+          @unit.say "#{R18n.t.detonate.bomb_deadly_explosion(R18n.t.direction[direction])}"
           bomb(direction, 1, 0, 8)
           [[1, 1], [1, -1], [2, 0], [0, 0]].each do |x, y|
             bomb(direction, x, y, 4)

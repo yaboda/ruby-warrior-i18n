@@ -9,7 +9,7 @@ module RubyWarrior
         verify_direction(direction)
         receiver = multi_unit(direction, 1..3).compact.first
         if receiver
-          @unit.say "#{R18n.t.shoot.and_hits(direction, receiver)}"
+          @unit.say "#{R18n.t.shoot.and_hits(R18n.t.direction[direction], receiver)}"
           damage(receiver, @unit.shoot_power)
         else
           @unit.say "#{R18n.t.shoot.and_hits_nothing}"
