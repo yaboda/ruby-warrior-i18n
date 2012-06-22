@@ -194,7 +194,7 @@ towers:
       tip: Usa warrior.direction_of_stairs para determinar en qué dirección están ubicadas las escaleras. Pasa el resultado a warrior.walk! para caminar en esa dirección.
     level_002:
       description: Otro cuarto grande, pero con varios enemigos bloqueando el camino hacia las escaleras.
-      tip: Justo como caminar, puedes atacar y percibir en múltiples direcciones: adelante, izquierda, derecha, atrás (:forward, :left, :right, :backward).
+      tip: "Justo como caminar, puedes atacar y percibir en múltiples direcciones: adelante, izquierda, derecha, atrás (:forward, :left, :right, :backward)."
       clue: Llama warrior.feel(direction).enemy? en cada dirección para estar seguro de que no hay enemigos cerca (ataca si los hay). Usa warrior.rest! para descansar para recuperar salud cuando no haya enemigos alrededor.
     level_003:
        description: Sientes cosas viscosas por todos lados, estás rodeado!
