@@ -2,7 +2,7 @@ runner:
   options:
     banner: "Uso: rubywarrior [opciones]"
     directory: Ejecutar bajo el directorio especificado
-    level: Practice level on epic
+    level: Practicar nivel en Modo Épico
     skip: Ignorar datos ingresados por el usuario
     time: Retardo en segundos de cada turno
     help: Muestra este mensaje
@@ -68,19 +68,19 @@ turn: turno
 only_one_turn: Sólo se puede realizar una acción por turno.
 bonus:
   time: Bono de tiempo
-  clear: Clear Bonus (TRADUCEME)
+  clear: Bono por despejar el área
 wall: la pared
 nothing: nada
 sludge:
-  first_letter: m
+  first_letter: s
 archer:
   first_letter: a
 thick_sludge:
-  first_letter: M
+  first_letter: S
 captive:
-  first_letter: C
+  first_letter: R
 wizard:
-  first_letter: H
+  first_letter: M
 golem:
   first_letter: G
   abilities: Habilidades del Golem
@@ -118,36 +118,36 @@ shoot:
   and_hits: dispara hacia %1 y golpea a %2
   and_hits_nothing: dispara y no golpea a nadie
 rescue:
-  description: Rescata a cautivo de su prisión (ganando 20 puntos) en la dirección especificada (adelante, por defecto).
+  description: Rescata a rehen de su prisión (ganando 20 puntos) en la dirección especificada (adelante, por defecto).
   unbinds_and_rescues: desata a %1 y rescata a %2
   unbinds_and_rescues_nothing: desata a %1 pero no restaca a nadie
 rotate:
-  description: Rota hacia :left, :right or :backward (por defecto)
+  description: Gira hacia :left, :right or :backward (por defecto)
   pivots: pivotes
 distance_of:
-  description: Pasa un Espacio como argumento, y regresará un número entero representando la distancia hacie ese espacio.
+  description: Pasa un espacio (Space) como argumento y regresará un número entero representando la distancia hacie ese espacio.
 bind:
-  description: Binds a unit in given direction to keep him from moving (forward by default).
-  and_restricts: binds %1 and restricts %2
-  and_restricts_nothing: binds %1 and restricts nothing 
+  description: Ata a una unidad en la dirección dada para evitar que se mueva (adelante, por defecto).
+  and_restricts: ata a %1 y restringe restricts %2
+  and_restricts_nothing: ata a %1 y no restringe nada 
 listen:
-  description: Regresa una matriz con todos los espacios los cuales tengan unidades.
+  description: Regresa una matriz con todos los espacios los cuales tengan unidades (enemigos, rehenes, etc).
 direction_of_stairs:
   description: Regresa la dirección (:left, :right, :forward, :backward) en la que están las escaleras desde tu ubicación.
 direction_of: 
-  description: Pasa un espacio como argumento, y la dirección (:left, :right, :forward, :backward) hacia ese espacio será regresada.
+  description: Pasa un espacio como argumento y la dirección (:left, :right, :forward, :backward) hacia ese espacio será regresada.
 explode: 
   description: Te mata a ti y a todas las unidades alrededor. Probablemente no quieras hacer esto intencionalmente.
   collapsing_the_ceiling: explota, colapsando el techo e hiriendo a todas las unidades.
-  is_ticking: esta haciendo tic tac
+  is_ticking: está haciendo tic tac
 detonate: 
   description: Detona una bomba en la dirección especificada (adelante, por defecto) que daña a ese espacio y los 4 espacios al rededor (incluido tú). 
-  bomb_deadly_explosion: detonates a bomb %1 launching a deadly explosion.
-  ticking_explosive: caught in bomb's flames which detonates ticking explosive
+  bomb_deadly_explosion: detona una bomba %1 creando una explosión mortal.
+  ticking_explosive: es alcanzado por las llamas lo cual detona el explosivo que trae consigo
 form:
-  description: Forms a golem in given direction taking half of invoker's health. The passed block is executed for each golem turn.
-  golem_gives_health: forms a golem %1 and gives half of his health (%2)
-  fails: fails to form golem because something is blocking the way.
+  description: Forma un golem en la dirección dada tomando la mitad de la salud del que lo invocó. El bloque pasado es ejecutado en cada turno del golem.
+  golem_gives_health: forma un golem %1 y da la mitad de su salud (%2)
+  fails: falla al formar el golem porque algo está bloqueando el camino.
 tip: tip
 hp: de salud
 when_you_are_done_run_rubywarrior: Cuando hayas terminado de editar player.rb, ejecuta rubywarrior de nuevo.
@@ -159,7 +159,7 @@ towers:
       tip: Usa warrior.walk! para caminar hacia adelante en el método 'play_turn' de la clase Player.
     level_002:
       description: Está muy oscuro y no se puede ver nada, pero hueles sludge muy cerca.
-      tip: Usa warrior.feel.empty? para saber si hay alguien frente a ti, y warrior.attack! para pelar. Recuerda, sólo puedes realizar una acción por turno (terminan en !).
+      tip: Usa warrior.feel.empty? para saber si hay alguien frente a ti y warrior.attack! para pelar. Recuerda, sólo puedes realizar una acción por turno (terminan en !).
       clue: Añade una condición if/else usando warrior.feel.empty? para decidir cuándo atacar (warrior.attack!) o caminar (warrior.walk!).
     level_003:
        description: El aire se siente más pesado que antes. Debe haber una horda de sludge.
@@ -170,58 +170,58 @@ towers:
        tip: No tienes nuevas habilidades esta vez, pero debes tener cuidado de no descansar cuando estés siendo atacado. Usa una variable de instancia @health y compárala en cada turno para ver si alguien te está atacando.
        clue: Guarda tu nivel actual de salud en @health al final de cada turno. Si ésta es mayor que tu nivel de salud en el siguiente turno sabrás que estás siendo atacado y no deberías descansar en dado caso.
     level_005: 
-       description: You hear cries for help. Captives must need rescuing.
-       tip: Use warrior.feel.captive? to see if there is a captive and warrior.rescue! to rescue him. Don't attack captives.
-       clue: Don't forget to constantly check if you're taking damage. Rest until your health is full if you aren't taking damage.
+       description: Escuchas sollozos y gritos de ayuda. Los rehenes necesitan ser rescatados.
+       tip: Usa warrior.feel.captive? para saber si hay un rehen y warrior.rescue! para rescatarlo. No ataques a los rehenes.
+       clue: No olvides revisar constantemente si estás siendo atacado, si no, descansa hasta que tu salud se recupere.
     level_006:
-       description: The wall behind you feels a bit further away in this room. And you hear more cries for help.
-       tip: You can walk backward by passing ':backward' as an argument to walk!. Same goes for feel, rescue! and attack!. Archers have a limited attack distance.
-       clue: Walk backward if you are taking damage from afar and do not have enough health to attack. You may also want to consider walking backward until warrior.feel(:backward).wall?.
+       description: La pared que está detrás de ti se siente un poco más lejana en este cuarto y escuchas más sollozos y gritos de ayuda.
+       tip: Puedes caminar hacia atrás pasando ':backward' como argumento al método walk!. Lo mismo para feel, rescue! y attack!. Los arqueros tiene una distancia de ataque limitada.
+       clue: Camina hacia atrás si estás siendo atacado desde lejos y no tienes suficiente salud para atacar. También puedes considerar caminar hacia atrás hasta que ya no puedas hacerlo más, usa warrior.feel(:backward).wall?.
     level_007: 
-       description: You feel a wall right in front of you and an opening behind you.
-       tip: You are not as effective at attacking backward. Use warrior.feel.wall? and warrior.pivot! to turn around.
+       description: Ves una pared justo delante de ti y una puerta detrás.
+       tip: No eres tan efectivo atacando hacia atrás. Usa warrior.feel.wall? y warrior.pivot! para darte la vuelta.
     level_008: 
-       description: You hear the mumbling of wizards. Beware of their deadly wands! Good thing you found a bow.
-       tip: Use warrior.look to determine your surroundings, and warrior.shoot! to fire an arrow.
-       clue: Wizards are deadly but low in health. Kill them before they have time to attack.
+       description: Escuchas el murmullo de los magos. Ten cuidado de sus mortales varitas mágicas! Lo bueno es que has encontrado un arco.
+       tip: Usa warrior.look para saber qué tienes a tu alrededor y warrior.shoot! para disparar una flecha.
+       clue: Los Magos son mortales pero tiene poca salud. Mátalos antes de que tengan tiempo de atacar.
     level_009:
-       description: Time to hone your skills and apply all of the abilities that you have learned.
-       tip: Watch your back.
-       clue: Don't just keep shooting the bow while you are being attacked from behind.
+       description: Es tiempo de afinar tus habilidades y aplicar todo lo que has aprendido.
+       tip: Mira detrás de ti.
+       clue: No te mantengas disparando el arco mientras te están atacandopor detrás.
   intermediate: 
     level_001: 
-      description: Silence. The room feels large, but empty. Luckily you have a map of this tower to help find the stairs.
-      tip: Use warrior.direction_of_stairs to determine which direction stairs are located. Pass this to warrior.walk! to walk in that direction.
+      description: Silencio. El cuarto parece grande, pero vacío. Afortunadamente tienes un mapa de esta torre para poder encontrar las escaleras.
+      tip: Usa warrior.direction_of_stairs para determinar en qué dirección están ubicadas las escaleras. Pasa el resultado a warrior.walk! para caminar en esa dirección.
     level_002:
-      description: Another large room, but with several enemies blocking your way to the stairs.
-      tip: Just like walking, you can attack! and feel in multiple directions (:forward, :left, :right, :backward).
-      clue: Call warrior.feel(direction).enemy? in each direction to make sure there isn't an enemy beside you (attack if there is). Call warrior.rest! if you're low and health when there are no enemies around.
+      description: Otro cuarto grande, pero con varios enemigos bloqueando el camino hacia las escaleras.
+      tip: Justo como caminar, puedes atacar y percibir en múltiples direcciones: adelante, izquierda, derecha, atrás (:forward, :left, :right, :backward).
+      clue: Llama warrior.feel(direction).enemy? en cada dirección para estar seguro de que no hay enemigos cerca (ataca si los hay). Usa warrior.rest! para descansar para recuperar salud cuando no haya enemigos alrededor.
     level_003:
-       description: You feel slime on all sides, you're surrounded!
-       tip: Call warrior.bind!(direction) to bind an enemy to keep him from attacking. Bound enemies look like captives.
-       clue: Count the number of enemies around you. Bind an enemy if there are two or more.
+       description: Sientes cosas viscosas por todos lados, estás rodeado!
+       tip: Llama warrior.bind!(dirección) para atar a un enemigo y así evitar que te ataque. Los enemigos atados se ven justo como rehenes.
+       clue: Cuenta el número de enemigos alrededor tuyo. Ata a un enemigo si hay dos o más.
     level_004:
-       description: Your ears become more in tune with the surroundings. Listen to find enemies and captives!
-       tip: Use warrior.listen to find spaces with other units, and warrior.direction_of to determine what direction they're in.
-       clue: Walk towards an enemy or captive with warrior.walk!(warrior.direction_of(warrior.listen.first)), once warrior.listen.empty? then head for the stairs.
+       description: Tus oidos se hacen más sensibles, escucha para encontrar enemigos y rehenes!
+       tip: Usa warrior.listen para encontrar los espacios donde hay alguien y warrior.direction_of para determinar en qué dirección están.
+       clue: Camina hacia el enemigo o rehen con warrior.walk!(warrior.direction_of(warrior.listen.first)) hasta que no haya nadie y después dirígete a las escaleras.
     level_005: 
-       description: You can feel the stairs right next to you, but are you sure you want to go up them right away?
-       tip: You'll get more points for clearing the level first. Use warrior.feel.stairs? and warrior.feel.empty? to determine where to go.
-       clue: If going towards a unit is the same direction as the stairs, try moving another empty direction until you can safely move toward the enemies.
+       description: Puedes sentir las escaleras justo a un lado tuyo, pero estás seguro de querer subirlas inmediatamente?
+       tip: Conseguirás más puntos por despejar el nivel primero. Usa warrior.feel.stairs? y warrior.feel.empty? para determinar a dónde ir.
+       clue: Si la dirección hacia donde está una unidad es la misma que la de las escaleras, intenta moverte hacia un espacio vacío hasta que puedas moverte con seguridad hacia los enemigos.
     level_006:
-       description: What's that ticking? Some captives have a timed bomb at their feet!
-       tip: Hurry and rescue captives first that have space.ticking?, they'll soon go!
-       clue: Avoid fighting enemies at first. Use warrior.listen and space.ticking? and quickly rescue those captives.
+       description: Qué es ese tic tac? Algunos rehenes tienen una bomba de tiempo en sus pies!
+       tip: Apresúrate y rescata primero a los rehenes que tienen su bomba a punto de explotar, para saberlo usa space.ticking?, se irán rápido!
+       clue: Evita pelear con tus enemigos al principio. Usa warrior.listen y space.ticking? y rápidamente rescata a ese rehenes.
     level_007: 
-       description: Another ticking sound, but some sludge is blocking the way.
-       tip: Quickly kill the sludge and rescue the captive before the bomb goes off. You can't simply go around them.
-       clue: Determine the direction of the ticking captive and kill any enemies blocking that path. You may need to bind surrounding enemies first.
+       description: Otro sonido de tic tac, pero un monstruo está bloqueando el camino.
+       tip: Rápidamente mata al monstruo y rescata al rehen antes de que la bomba explote. No puedes simplemente esquivarlos yéndote por una lado de ellos.
+       clue: Determina la dirección del rehen con la bomba a punto de explotar y mata a los enemigos que estén bloqueando tu camino. Probablemente necesites atar enemigos que esté alrededor.
     level_008: 
-       description: You discover a satchel of bombs which will help when facing a mob of enemies.
-       tip: Detonate a bomb when you see a couple enemies ahead of you (warrior.look). Watch out for your health too.
-       clue: Calling warrior.look will return an array of Spaces. If the first two contain enemies, detonate a bomb with warrior.detonate!.
+       description: Descubres una bolsa con bombas que te ayudarán cuando te enfrentes a un multitud de enemigos.
+       tip: Detona una bomba cuando veas a un par de enemigos delante de ti (warrior.look). También revisa tu salud.
+       clue: Llamando warrior.look regresará una lista de espacios (Spaces). Si los primeros dos tienen enemigos, detona una bomba con warrior.detonate!.
     level_009:
-       description: Never before have you seen a room so full of sludge. Start the fireworks!
-       tip: Be careful not to let the ticking captive get caught in the flames. Use warrior.distance_of to avoid the captives.
-       clue: Be sure to bind the surrounding enemies before fighting. Check your health before detonating explosives.
+       description: Nunca antes habías visto un cuarto con tantos monstruos. Que empiecen los fuegos artificiales!
+       tip: Ten cuidado de no dejar que un rehen con una bomba quede atrapado entre las llamas. Usa warrior.distance_of para evitar a los rehenes.
+       clue: Asegúrate de atar a los enemigos que haya alrededor antes de pelear. Revisa tu salud antes de detonar explosivos.
 
