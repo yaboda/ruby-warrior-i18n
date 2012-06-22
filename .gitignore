@@ -4,3 +4,4 @@ tmp/**/*
 .buildpath
 .rvmrc
 rubywarrior/
+tags
