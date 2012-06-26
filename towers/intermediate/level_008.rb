@@ -4,9 +4,9 @@
 
 t = R18n.t.towers.intermediate.level_008
 
-description ""
-tip ""
-clue ""
+description t.description
+tip t.tip
+clue t.clue
 
 time_bonus 30
 size 7, 1

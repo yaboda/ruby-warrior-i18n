@@ -110,7 +110,7 @@ attack:
   and_hits: ataca hacia %1 y golpea a %2
   and_hits_nothing: ataca hacia %1 y no golpea a nadie
 feel:
-  description: Devuelve el espacio (Space) que está en la dirección especificada (adelante, por defecto).
+  description: Devuelve el nombre de la unidad (si existe alguna) que esté en la dirección especificada (adelante, por defecto).
 rest:
   description: Recupera 10% de salud, pero no hace nada más.
   receives_health: recibe %1 de salud por descansar, ahora tiene %2 de salud
@@ -133,7 +133,7 @@ rotate:
 distance_of:
   description: Pasa un espacio (Space) como argumento y regresará un número entero representando la distancia hacie ese espacio.
 bind:
-  description: Ata a una unidad en la dirección dada para evitar que se mueva (adelante, por defecto).
+  description: Paraliza a una unidad en la dirección dada para evitar que se mueva (adelante, por defecto).
   and_restricts: ata a %1 y restringe restricts %2
   and_restricts_nothing: ata a %1 y no restringe nada 
 listen:
@@ -204,8 +204,8 @@ towers:
       clue: Llama warrior.feel(direction).enemy? en cada dirección para estar seguro de que no hay enemigos cerca (ataca si los hay). Usa warrior.rest! para descansar para recuperar salud cuando no haya enemigos alrededor.
     level_003:
        description: Sientes cosas viscosas por todos lados, estás rodeado!
-       tip: Llama warrior.bind!(dirección) para atar a un enemigo y así evitar que te ataque. Los enemigos atados se ven justo como rehenes.
-       clue: Cuenta el número de enemigos alrededor tuyo. Ata a un enemigo si hay dos o más.
+       tip: Llama warrior.bind!(dirección) para paralizar a un enemigo y así evitar que te ataque. Los enemigos paralizados se ven justo como rehenes.
+       clue: Cuenta el número de enemigos alrededor tuyo. Paraliza a un enemigo si hay dos o más.
     level_004:
        description: Tus oidos se hacen más sensibles, escucha para encontrar enemigos y rehenes!
        tip: Usa warrior.listen para encontrar los espacios donde hay alguien y warrior.direction_of para determinar en qué dirección están.
@@ -221,7 +221,7 @@ towers:
     level_007: 
        description: Otro sonido de tic tac, pero un monstruo está bloqueando el camino.
        tip: Rápidamente mata al monstruo y rescata al rehen antes de que la bomba explote. No puedes simplemente esquivarlos yéndote por una lado de ellos.
-       clue: Determina la dirección del rehen con la bomba a punto de explotar y mata a los enemigos que estén bloqueando tu camino. Probablemente necesites atar enemigos que esté alrededor.
+       clue: Determina la dirección del rehen con la bomba a punto de explotar y mata a los enemigos que estén bloqueando tu camino. Probablemente necesites paralizar enemigos que estén alrededor.
     level_008: 
        description: Descubres una bolsa con bombas que te ayudarán cuando te enfrentes a un multitud de enemigos.
        tip: Detona una bomba cuando veas a un par de enemigos delante de ti (warrior.look). También revisa tu salud.
@@ -229,5 +229,5 @@ towers:
     level_009:
        description: Nunca antes habías visto un cuarto con tantos monstruos. Que empiecen los fuegos artificiales!
        tip: Ten cuidado de no dejar que un rehen con una bomba quede atrapado entre las llamas. Usa warrior.distance_of para evitar a los rehenes.
-       clue: Asegúrate de atar a los enemigos que haya alrededor antes de pelear. Revisa tu salud antes de detonar explosivos.
+       clue: Asegúrate de paralizar a los enemigos que haya alrededor antes de pelear. Revisa tu salud antes de detonar explosivos.
 
