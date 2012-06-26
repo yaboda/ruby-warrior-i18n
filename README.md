@@ -22,7 +22,24 @@ If you want to translate `ruby-warrior-i18n` to your native language feel free t
 * Fork this repo
 * Create a topic branch named after the name of your language in english (ie. japanese, german, french)
 * Create a yml file in the `i18n/` folder named after your languages' [two-letter code](http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes#Partial_ISO_639_table)
+* Run `rubywarrior` using your language, e.g. `$ LANG=es ./bin/rubywarrior`
 * Make a pull request
+
+ruby-warrior-i18n takes advantage of the R18n-desktop gem to select the language from the user locales, if you want to test with a different language without specifying the `LANG` environment variable, here's how to change them:
+
+### Mac OS X
+
+Drag the language to the top of the list in:
+
+	System Preferences > Languages and Text > Language tab
+
+### Linux
+
+	?
+	
+### Windows
+
+	?
 
 ## Getting Started
 
