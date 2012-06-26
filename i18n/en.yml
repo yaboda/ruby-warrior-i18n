@@ -99,7 +99,7 @@ direction:
   move_forward_default: Move in the given direction (forward by default).
   bumps_into: bumps into
   forward: forward
-  backward: backwards
+  backward: backward
   left: left
   right: right
 walk:

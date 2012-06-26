@@ -53,7 +53,7 @@ module RubyWarrior
       end
       
       def name
-        R18n.t[self.class.name.split('::').last.downcase].name
+        R18n.t[self.class.name.split('::').last.downcase].name.capitalize
       end
       alias_method :to_s, :name
       

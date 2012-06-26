@@ -50,13 +50,13 @@ describe RubyWarrior::Units::Base do
   end
   
   it "should print out line with name when speaking" do
-    RubyWarrior::UI.expects(:puts_with_delay).with("Base foo")
+    RubyWarrior::UI.expects(:puts_with_delay).with("[base.name.capitalize] foo")
     @unit.say "foo"
   end
   
   it "should return name in to_s" do
-    @unit.name.should == 'Base'
-    @unit.to_s.should == 'Base'
+    @unit.name.should match /base/
+    @unit.to_s.should match /base/
   end
   
   it "should prepare turn by calling play_turn with next turn object" do

@@ -9,7 +9,7 @@ module RubyWarrior
         verify_direction(direction)
         receiver = unit(direction)
         if receiver
-          @unit.say "#{R18n.t.bind.and_restricts(R18n.t.direction[direction], receiver)}"
+          @unit.say R18n.t.bind.and_restricts(R18n.t.direction[direction], "#{receiver}")
           receiver.bind
         else
           @unit.say "#{R18n.t.bind.and_restricts_nothing(R18n.t.direction[direction])}"

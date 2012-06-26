@@ -14,6 +14,6 @@ describe RubyWarrior::Units::ThickSludge do
   end
   
   it "should have the name of 'Thick Sludge'" do
-    @sludge.name.should == "Thick Sludge"
+    @sludge.name.should == "Thick sludge"
   end
 end
