@@ -5,3 +5,6 @@ tmp/**/*
 .rvmrc
 rubywarrior/
 tags
+.bundle
+Gemfile.lock
+pkg/*
