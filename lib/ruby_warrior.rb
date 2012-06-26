@@ -2,7 +2,7 @@ $: << File.dirname(__FILE__)
 
 require 'r18n-desktop'
 
-R18n.from_env('./i18n/', ENV['LANG'])
+R18n.from_env(File.expand_path("#{File.dirname(__FILE__)}/../i18n/"), ENV['LANG'])
 
 require 'set'
 
