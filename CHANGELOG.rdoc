@@ -1,3 +1,13 @@
+0.0.2 (June 26, 2012)
+
+* Fixing i18n files load path
+
+0.0.1 (June 26, 2012)
+
+* ruby-warrior-i18n was born
+* Implemented i18n using the R18n-desktop gem
+* Translated to spanish
+	
 0.1.3 (April 28, 2012)
 
 * Making specs pass with latest RSpec.
