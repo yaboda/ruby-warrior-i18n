@@ -3,6 +3,7 @@ require 'rspec'
 require 'rspec/core/rake_task'
 require 'cucumber'
 require 'cucumber/rake/task'
+require 'bundler/gem_tasks'
 
 desc "Run specs"
 RSpec::Core::RakeTask.new(:spec) do |t|

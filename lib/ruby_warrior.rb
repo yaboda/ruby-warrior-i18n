@@ -1,12 +1,12 @@
 $: << File.dirname(__FILE__)
 
-require 'bundler/setup'
-Bundler.setup
 require 'r18n-desktop'
 
 R18n.from_env('./i18n/', ENV['LANG'])
 
 require 'set'
+
+require 'ruby_warrior/version'
 
 require 'ruby_warrior/core_additions'
 
