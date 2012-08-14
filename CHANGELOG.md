@@ -1,3 +1,7 @@
+# 0.0.3 *(August 14, 2012)*
+
+* Japanese translation
+
 # 0.0.2 *(June 26, 2012)*
 
 * Fixing i18n files load path
